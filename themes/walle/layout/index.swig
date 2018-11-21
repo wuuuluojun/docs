@@ -16,4 +16,7 @@
       </div>
     </div>
   </div>
+  {{ partial('partial/detail') }}
+  {{ partial('partial/user') }}
+  {{ partial('partial/contact') }}
 </div>

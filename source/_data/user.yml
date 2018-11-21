@@ -1,0 +1,44 @@
+title: 他们都在使用
+desc: 累计安装量超过25000次.
+items: [
+  [{
+    src: images/user/walle.png,
+    title: 东方明珠,
+    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
+  },
+  {
+    src: images/user/walle.png,
+    title: 东方明珠,
+    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
+  },
+  {
+    src: images/user/walle.png,
+    title: 东方明珠,
+    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
+  },
+  {
+    src: images/user/walle.png,
+    title: 东方明珠,
+    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
+  }],
+  [{
+    src: images/user/walle.png,
+    title: 东方明珠,
+    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
+  },
+  {
+    src: images/user/walle.png,
+    title: 东方明珠,
+    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
+  },
+  {
+    src: images/user/walle.png,
+    title: 东方明珠,
+    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
+  },
+  {
+    src: images/user/walle.png,
+    title: 东方明珠,
+    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
+  }]
+]
