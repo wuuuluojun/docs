@@ -57,7 +57,8 @@ after_script:
   - git rm -r *
   - git commit -am "remove"
   - cd ..
-  - cp -rf public/docs/zh-cn/* public/docs/
+  - cp -rf public/docs/1/zh-cn/* public/docs/1/
+  - cp -rf public/docs/2/zh-cn/* public/docs/2/
   - cp -rf public/* .deploy_git/
   - cd .deploy_git
   - git add -A
