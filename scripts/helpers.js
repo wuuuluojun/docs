@@ -142,6 +142,15 @@ hexo.extend.helper.register('lang_name', function(lang){
   return data.name || data;
 });
 
+hexo.extend.helper.register('current_version', function(){
+  var key = this.page.canonical_path.split('/')[1]
+  var name = this.site.data.version.list[key];
+  return {
+    key: key,
+    name: name
+  }
+});
+
 hexo.extend.helper.register('disqus_lang', function(){
   var lang = this.page.lang;
   var data = this.site.data.languages[lang];

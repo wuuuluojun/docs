@@ -1,0 +1,5 @@
+version: walle-2.0
+list: {
+  1: walle-1.0,
+  2: walle-2.0
+}
