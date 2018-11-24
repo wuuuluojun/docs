@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - "6"
+  - "4"
 
 cache:
   apt: true
@@ -30,13 +30,13 @@ before_install:
   # Set Git config
   - git config --global user.name "meolu"
   - git config --global user.email "wushuiyong@huamanshu.com"
-  - git config --global push.default simple
-  - NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install 6
-  - rm -rf $HOME/.node-gyp
+  # - git config --global push.default simple
+  # - NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install 4
+  # - rm -rf $HOME/.node-gyp
   - npm cache clean -f
   - npm install npm -g
-  - npm uninstall node-gyp -g
-  - npm install sharp --save
+  # - npm uninstall node-gyp -g
+  # - npm install sharp --save
 
 script:
   # Clone the repository
