@@ -7,7 +7,7 @@
     {{ partial('partial/header') }}
     <header id="banner" class="wrapper">
       <div class="inner">
-        <h2 id="banner-title">{{ page.subtitle }}</h2>
+        <h2 id="banner-title">{{ site.data.index.subtitle }}</h2>
         <div id="banner-start">
         </div>
         <div id="banner-share">{{ partial('partial/share') }}</div>
