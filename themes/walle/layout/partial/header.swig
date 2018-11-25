@@ -1,7 +1,11 @@
 <header id="header" class="wrapper">
   <div id="header-inner" class="inner">
-    <h1 id="logo-wrap">
-      <img id="logo-img" src="{{ url_for('images/user/logo.blue.png') }}" />
+    <h1 id="logo-wrap" class="{% if is_home() %}home-logo{% endif %}">
+      {% if is_home() %}
+        <img id="logo-img" src="{{ url_for('images/user/logo.white.png') }}" />
+      {% else %}
+        <img id="logo-img" src="{{ url_for('images/user/logo.blue.png') }}" />
+      {% endif %}
       <a href="{{ url_for_lang('') }}" id="logo">Walle</a>
     </h1>
     <nav id="main-nav">

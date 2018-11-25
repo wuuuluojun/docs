@@ -1,15 +1,15 @@
 title: 联系我们
 list: [
-  {
-    title: 官方QQ群,
-    src: images/user/contact.jpeg
-  },
+  # {
+  #   title: 官方QQ群,
+  #   src: images/user/contact.jpeg
+  # },
   {
     title: 微信公众号,
-    src: images/user/contact.jpeg
+    src: images/user/wechat-gzh.jpeg
   },
-  {
-    title: 知识星球,
-    src: images/user/contact.jpeg
-  }
+  # {
+  #   title: 知识星球,
+  #   src: images/user/contact.jpeg
+  # }
 ]
