@@ -10,35 +10,5 @@ items: [
     src: images/user/wowokuaiyun.png,
     title: 喔喔快运,
     desc: 最后一公里，交给喔喔快运，连接同城配送、顺风快递、整车物流等多个个板块在内的综合性新能源智慧物流平台。
-  },
-  {
-    src: images/user/walle.png,
-    title: 东方明珠,
-    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
-  },
-  {
-    src: images/user/walle.png,
-    title: 东方明珠,
-    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
-  }],
-  [{
-    src: images/user/walle.png,
-    title: 东方明珠,
-    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
-  },
-  {
-    src: images/user/walle.png,
-    title: 东方明珠,
-    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
-  },
-  {
-    src: images/user/walle.png,
-    title: 东方明珠,
-    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
-  },
-  {
-    src: images/user/walle.png,
-    title: 东方明珠,
-    desc: 上海广播电视台、上海文化广播影视集团有限公司（SMG）旗下统一的产业平台和资本平台。
   }]
 ]
