@@ -1,0 +1,2 @@
+server:
+  compress: true # 开启压缩

@@ -36,7 +36,10 @@ before_install:
   # - npm cache clean -f
   # - npm install npm -g
   # - npm uninstall node-gyp -g
-  - npm install sharp --save
+  # - npm install sharp --save
+
+install:
+  - npm install
 
 script:
   # Clone the repository
@@ -49,7 +52,7 @@ script:
   # - git subtree add --prefix=source/docs/zh-cn docs/zh-cn --squash
   # Install dependencies
   - mv -f walle-web.io/* source/
-  - npm install --no-optional
+  # - npm install --no-optional
 
 after_script:
   - hexo generate && gulp

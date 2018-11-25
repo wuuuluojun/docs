@@ -29,7 +29,7 @@
       </select>
     </div>
     {% endif %}
-    {% if !page.is_home %}
+    {% if !is_home() %}
     <div id="search-btn-wrap" class="main-nav-item">
       <input type="text" class="st-default-search-input">
     </div>
