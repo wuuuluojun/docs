@@ -1,6 +1,7 @@
 <header id="header" class="wrapper">
   <div id="header-inner" class="inner">
     <h1 id="logo-wrap">
+      <img id="logo-img" src="{{ url_for('images/user/logo.blue.png') }}" />
       <a href="{{ url_for_lang('') }}" id="logo">Walle</a>
     </h1>
     <nav id="main-nav">
