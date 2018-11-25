@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - "4"
+  - "9"
 
 cache:
   apt: true
@@ -30,13 +30,16 @@ before_install:
   # Set Git config
   - git config --global user.name "meolu"
   - git config --global user.email "wushuiyong@huamanshu.com"
-  - git config --global push.default simple
-  - NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install 4
-  - rm -rf $HOME/.node-gyp
-  - npm cache clean -f
-  - npm install npm -g
-  - npm uninstall node-gyp -g
-  - npm install sharp --save
+  # - git config --global push.default simple
+  # - NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install 9
+  # - rm -rf $HOME/.node-gyp
+  # - npm cache clean -f
+  # - npm install npm -g
+  # - npm uninstall node-gyp -g
+  # - npm install sharp --save
+
+install:
+  - npm install
 
 script:
   # Clone the repository
@@ -49,7 +52,7 @@ script:
   # - git subtree add --prefix=source/docs/zh-cn docs/zh-cn --squash
   # Install dependencies
   - mv -f walle-web.io/* source/
-  - npm install --no-optional
+  # - npm install --no-optional
 
 after_script:
   - hexo generate && gulp
@@ -57,7 +60,8 @@ after_script:
   - git rm -r *
   - git commit -am "remove"
   - cd ..
-  - cp -rf public/docs/zh-cn/* public/docs/
+  - cp -rf public/docs/1/zh-cn/* public/docs/1/
+  - cp -rf public/docs/2/zh-cn/* public/docs/2/
   - cp -rf public/* .deploy_git/
   - cd .deploy_git
   - git add -A

@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
 {{ partial('partial/head') }}
-<body class="{% if page.is_home %}home{% endif %}">
+<body class="{% if is_home() %}home{% endif %}">
   <div id="container">
-    {% if page.is_home %}<div class="with-background">{% endif %}
+    {% if is_home() %}<div class="with-background">{% endif %}
     {{ partial('partial/header') }}
+    <header id="banner" class="wrapper">
+      <div class="inner">
+        <h2 id="banner-title">{{ site.data.index.subtitle }}</h2>
+        <div id="banner-start">
+        </div>
+        <div id="banner-share">{{ partial('partial/share') }}</div>
+      </div>
+    </header>
+    </div>
     {{ body }}
   </div>
   {{ partial('partial/footer') }}

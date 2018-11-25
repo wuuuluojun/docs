@@ -1,12 +1,3 @@
-<header id="banner" class="wrapper">
-  <div class="inner">
-    <h2 id="banner-title">{{ page.subtitle }}</h2>
-    <div id="banner-start">
-    </div>
-    <div id="banner-share">{{ partial('partial/share') }}</div>
-  </div>
-</header>
-</div>
 <div id="content-wrap">
   <div class="wrapper">
     <div class="inner">
@@ -16,4 +7,7 @@
       </div>
     </div>
   </div>
+  {{ partial('partial/detail') }}
+  {{ partial('partial/user') }}
+  {{ partial('partial/contact') }}
 </div>

@@ -1,0 +1,38 @@
+title: 让你体验不一样的上线部署
+src: images/user/detail-demo.png
+list: {
+  left: [
+    {
+      icon: fa fa-rebel,
+      title: 用户/用户组,
+      desc: 用户是授权和登录的主体，用户组方便组织授权
+    },
+    {
+      icon: fa fa-cube,
+      title: 资产/资产树,
+      desc: 采纳资产树组织资产，管理起来异常方便
+    },
+    {
+      icon: fa fa-download,
+      title: 授权规则,
+      desc: 使用资产树授权，当节点资产变化时，自动继承授权.
+    }
+  ],
+  right: [
+    {
+      icon: fa fa-edit,
+      title: 会话记录/命令记录,
+      desc: 实时监控在线用户操作，支持录像回放，可中断用户不良操作
+    },
+    {
+      icon: fa fa-binoculars,
+      title: 混合云部署,
+      desc: 一个中心节点，各区域部署接入节点，统一管理
+    },
+    {
+      icon: fa fa-gear,
+      title: Web terminal,
+      desc: 领先的Web Terminal方案，支持Windows
+    }
+  ]
+}

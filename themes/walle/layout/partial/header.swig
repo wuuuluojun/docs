@@ -19,7 +19,17 @@
         {% endfor %}
       </select>
     </div>
-    {% if !page.is_home %}
+    {% if page.path.indexOf('docs')>-1 %}
+     <div id="select-version-wrap">
+      <label id="lang-select-label"><span>{{ (current_version()).name }}</span></label>
+      <select id="version-select">
+        {% for ver in site.data.version.list %}
+          <option value="{{ loop.key }}"{% if (current_version()).key === loop.key %} selected{% endif %}>{{ ver }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    {% endif %}
+    {% if !is_home() %}
     <div id="search-btn-wrap" class="main-nav-item">
       <input type="text" class="st-default-search-input">
     </div>

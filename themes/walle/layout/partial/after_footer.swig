@@ -1,6 +1,9 @@
 <!-- Scripts -->
 <!-- build:js build/js/main.js -->
 {{ js('js/lang_select') }}
+{% if page.path.indexOf('docs')>-1 %}
+{{ js('js/version_select') }}
+{% endif %}
 {{ js('js/toc') }}
 {{ js('js/mobile_nav') }}
 <!-- endbuild -->
