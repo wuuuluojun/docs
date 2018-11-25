@@ -2,8 +2,8 @@
 <h1 class="aboutme-title">核心成员</h1>
 <div class="aboutme-img">
     <img src="{{ url_for('images/user/weixin.wushuiyong.jpg') }}" />
-    <img src="{{ url_for('images/user/weixin.yexinhao.jpg') }}" />
     <img class="chenfeng" src="{{ url_for('images/user/chenfengjuan.jpeg') }}" />
+    <img src="{{ url_for('images/user/weixin.yexinhao.jpg') }}" />
 </div>
 <h1 class="aboutme-title">关于我及项目</h1>
 <div class="aboutme-project">
