@@ -5,7 +5,7 @@
   <div id="container">
     {% if is_home() %}<div class="with-background">{% endif %}
     {{ partial('partial/header') }}
-    <header id="banner" class="wrapper">
+    {% if is_home() %}<header id="banner" class="wrapper">
       <div class="inner">
         <h2 id="banner-title">{{ site.data.index.subtitle }}</h2>
         <div id="banner-start">
@@ -14,6 +14,7 @@
       </div>
     </header>
     </div>
+    {% endif %}
     {{ body }}
   </div>
   {{ partial('partial/footer') }}

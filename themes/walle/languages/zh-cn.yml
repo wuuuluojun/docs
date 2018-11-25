@@ -2,6 +2,7 @@ menu:
   home: 首页
   docs: 文档
   news: 动态
+  about: 关于我们
 
 index:
   get_started: 快速开始
