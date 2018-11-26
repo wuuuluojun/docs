@@ -6,7 +6,7 @@
           <div class="intro-feature"><div class="intro-feature-icon"><i class="fa fa-code"></i></div>
           <h3 class="intro-feature-title">稳定的上线</h3>
           </div>
-          <p class="intro-feature-desc"> 支持多项目、多环境一键部署上线，一键快速回滚</p>
+          <p class="intro-feature-desc"> 支持多项目、多环境一键部署上线，一键快速回滚。</p>
       </li>
       <li class="intro-feature-wrap">
           <div class="intro-feature"><div class="intro-feature-icon"><i class="fa fa-cogs"></i></div>
