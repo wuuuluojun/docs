@@ -3,7 +3,7 @@
 {{ partial('partial/head') }}
 <body class="{% if is_home() %}home{% endif %}">
   <div id="container">
-    {% if is_home() %}<div class="with-background">{% endif %}
+    {% if is_home() %}<div class="with-background" style="background-size: 100% 850px;">{% endif %}
     {{ partial('partial/header') }}
     {% if is_home() %}<header id="banner" class="wrapper">
       <div class="inner">
