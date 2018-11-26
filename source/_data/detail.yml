@@ -4,35 +4,35 @@ list: {
   left: [
     {
       icon: fa fa-rebel,
-      title: 用户/用户组,
-      desc: 用户是授权和登录的主体，用户组方便组织授权
+      title: 空间管理,
+      desc: 类gitlab的独立的空间资源
     },
     {
       icon: fa fa-cube,
-      title: 资产/资产树,
-      desc: 采纳资产树组织资产，管理起来异常方便
+      title: 服务器管理,
+      desc: 打通服务器管理、灰度发布
     },
     {
       icon: fa fa-download,
-      title: 授权规则,
-      desc: 使用资产树授权，当节点资产变化时，自动继承授权.
+      title: 项目管理,
+      desc: 项目管理员、通知机制、自定义各流程中的hooks
     }
   ],
   right: [
     {
       icon: fa fa-edit,
-      title: 会话记录/命令记录,
-      desc: 实时监控在线用户操作，支持录像回放，可中断用户不良操作
+      title: 环境管理,
+      desc: 自定义环境、环境变量
     },
     {
       icon: fa fa-binoculars,
-      title: 混合云部署,
-      desc: 一个中心节点，各区域部署接入节点，统一管理
+      title: 用户管理,
+      desc: 先进的类gitlab用户管理模式
     },
     {
       icon: fa fa-gear,
-      title: Web terminal,
-      desc: 领先的Web Terminal方案，支持Windows
+      title: 部署管理,
+      desc: 上线单申请、审核、灰度发布、实时websocket
     }
   ]
 }
