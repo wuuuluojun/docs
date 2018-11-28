@@ -10,5 +10,17 @@ items: [
     src: images/user/wowokuaiyun.png,
     title: 喔喔快运,
     desc: 最后一公里，交给喔喔快运，连接同城配送、顺风快递、整车物流等多个个板块在内的综合性新能源智慧物流平台。
+  },
+  {
+    src: images/user/jiawenjiaoyun.jpeg,
+    title: 嘉文教育,
+    style: "width: 110px; max-height: none;",
+    desc: 一所集学习能力培养、英语及其他特色课程为一体的培训机构，师资力量雄厚，教学环境优雅，个性化教学、注重培养学生自我解决问题的能力，让孩子轻松学习，赢在未来。
+  },
+  {
+    src: images/user/qingsongzhuishu.png,
+    title: 轻松追书,
+    style: "width: 170px;",
+    desc: 轻松追书专注于玄幻小说搜索，轻松追书，提供最全的小说保持最快的更新，方便大家轻松愉快地在线阅读小说！
   }]
 ]
