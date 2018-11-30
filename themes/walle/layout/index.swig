@@ -14,6 +14,8 @@
           </div>
           <p class="intro-feature-desc">上线单申请、审核、部署、实时操作日志。</p>
       </li>
+      </ul>
+      <ul id="intro-feature-list">
       <li class="intro-feature-wrap">
           <div class="intro-feature"><div class="intro-feature-icon"><i class="fa fa-book"></i></div>
           <h3 class="intro-feature-title">多任务插件</h3>

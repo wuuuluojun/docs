@@ -12,7 +12,11 @@
                     <h1>{{item.title}}</h1>
                     <p>{{item.desc}}</p>
                 </div>
+                {% if item.style %}
+                <img src="{{ url_for(item.src) }}" style="{{item.style}}"/>
+                {% else %}
                 <img src="{{ url_for(item.src) }}"/>
+                 {% endif %}
             </div>
         {% endfor %}
       </div>
