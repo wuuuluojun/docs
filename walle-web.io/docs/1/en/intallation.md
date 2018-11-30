@@ -1,7 +1,7 @@
 title: Installation
 ---
 
-A linux server which configures LAMP/LNMP and git/svn, this is all. Any question refer to [Q&A](https://github.com/meolu/walle-web/blob/master/docs/faq.md)
+A linux server which configures LAMP/LNMP and git/svn, this is all. Any question refer to [Q&A](https://github.com/meolu/walle-web-v1.x/blob/master/docs/faq.md)
 
 Requirements
 ------------
@@ -15,7 +15,7 @@ Requirements
 ------------
 ```
 mkdir -p /data/www/walle-web && cd /data/www/walle-web  # A place to store
-git clone git@github.com:meolu/walle-web.git .          # clone is easy for update
+git clone git@github.com:meolu/walle-web-v1.x.git .          # clone is easy for update
 ```
 
 
