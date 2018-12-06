@@ -1,4 +1,5 @@
 title: Installation
+lang: en
 ---
 
 A linux server which configures LAMP/LNMP and git/svn, this is all. Any question refer to [Q&A](https://github.com/meolu/walle-web-v1.x/blob/master/docs/faq.md)
