@@ -1,4 +1,5 @@
 title: Git Configuration
+lang: en
 ---
 
 .Requirements：
