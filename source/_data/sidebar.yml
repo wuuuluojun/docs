@@ -2,6 +2,7 @@ docs:
 
   getting_started:
     overview: index.html
+    architecture: architecture.html
     dependency: dependency.html
     installation: installation.html
     upgrade: upgrade.html
@@ -9,6 +10,10 @@ docs:
     troubleshooting: troubleshooting.html
   configuration:
     git_configuration: git-configuration.html
+    svn_configuration: svn-configuration.html
+    task_configuration: task-configuration.html
+    user_configuration: user-configuration.html
+    configuration_error: configuration-error.html
   getting_deploy:
     submit_bill: submit-bill.html
     deploying: deploying.html
