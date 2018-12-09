@@ -44,3 +44,14 @@ title: walle 2.0 瓦力
 - **2.1.0**  2019-01-27 :new:新年版
     - CAS
     - 冲刺`github` 6000 `star`（靠你们和你们的同事们了）
+
+## 新的惊喜
+后续更新和解剖讨论、以及walle有趣的人和事，将会放到公众号：walle-web，晨间除了写开源，也会写千字文，关注不迷路：）
+
+<img src="https://raw.githubusercontent.com/meolu/walle-web/master/screenshot/wechat-gzh.jpg" width="244" height="314" alt="公众号 walle-web" />
+
+
+## 打赏作者杯咖啡
+你也不一定要赞赏，芸芸众生，相遇相识是一种缘份。不过可以给点个star，或者关注公众号，哈哈
+
+<img src="https://raw.githubusercontent.com/meolu/walle-web/master/screenshot/appreciation-wechat.jpg" width="220" height="220" alt="赞赏码" />
