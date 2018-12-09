@@ -7,4 +7,4 @@ title: 安装错误
 ## 其它问题
 - [提Issue](https://github.com/meolu/walle-web/issues/new/choose)
 - 加微信群，互帮互助
-![](walle-web.io/docs/2/zh-cn/static/wechat_group.jpg)
+![](/docs/2/zh-cn/static/wechat_group.jpg)
