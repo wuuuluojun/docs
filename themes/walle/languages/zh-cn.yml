@@ -19,12 +19,11 @@ page:
 sidebar:
   docs:
     getting_started: 快速开始
-    overview: 概述
     dependency: 依赖
     installation: 安装
-    upgrade: 升级
-    troubleshooting: 常见问题排解
+    upgrade: walle 1.x升级
     install_error: 安装错误
+    troubleshooting: 常见问题排解
     configuration: 配置项目
     git_configuration: Git项目配置
     task_configuration: 高级任务配置
