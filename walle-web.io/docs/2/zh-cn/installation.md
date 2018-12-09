@@ -1,7 +1,5 @@
 title: 安装
 ---
-# Walle 2.0
-Welcome to Walle 2.0. Alpha is a unstable version, please waiting for developer's released tag. If you Have the ability to have try, just try, but I hove no time for truble shooting, fix it by yourself, or submit a issue.
 
 # Developer
 ## 1.给此项目标个星star
@@ -30,7 +28,7 @@ server {
     location / {
         try_files $uri $uri/ /index.html;
         add_header access-control-allow-origin *;
-        root /Users/wushuiyong/workspace/meolu/walle-fe/dist; # 前端代码
+        root /walle-web/fe; # 前端代码
     }
 
     location ^~ /api/ {
