@@ -6,6 +6,7 @@ docs:
     dependency: dependency.html
     installation: installation.html
     upgrade: upgrade.html
+    troubleshooting: troubleshooting.html
     install_error: install-error.html
   configuration:
     git_configuration: git-configuration.html
@@ -20,6 +21,5 @@ docs:
   customization:
     local: local.html
   miscellaneous:
-    troubleshooting: troubleshooting.html
     contributing: contributing.html
     releases: releases.html
