@@ -3,6 +3,7 @@ docs:
   getting_started:
     overview: index.html
     architecture: architecture.html
+    permission: permission.html
     dependency: dependency.html
     installation: installation.html
     upgrade: upgrade.html

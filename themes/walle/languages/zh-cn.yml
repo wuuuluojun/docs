@@ -24,6 +24,7 @@ sidebar:
     dependency: 依赖
     installation: 安装
     upgrade: 升级
+    permission: 权限模型
     install_error: 安装错误
     configuration: 配置项目
     git_configuration: Git项目配置

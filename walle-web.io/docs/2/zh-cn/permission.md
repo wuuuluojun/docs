@@ -1,7 +1,27 @@
-权限表
-======
+权限模型
+---
+## 权限模型角色
+
+### SUPER 超管
+walle的管理员：负责平台运维、开通空间并分配空间owner
+
+### OWNER 所有者
+空间所有者：业务线负责，如大数据，新建项目并分配项目master，增加各方向leader作为空间master
+
+### MASTER 负责人
+具体子方向leader：空间master作为一个部门的具体子方向leader，管理该方向的服务器、项目等，为Owner分担具体事务
+
+具体项目leader：项目master作为一个具体项目leader，辅助Master审核上线单等
+
+### DEVELOPER 开发者
+普通开发者：提交上线单、上线
+
+### REPORTER 访客
+访客：我也不知道为什么这么低级别的角色有什么用，可能是我一直都是级别很高的原因吧
 
 
+
+## 权限码表
 | action                               | reporter | developer | master | owner | supers |
 | ------------------------------------ | -------- | --------- | ------ | ----- | ------ |
 | Dashboard-xxx-查看                   | ✓        | ✓         | ✓      | ✓     | ✓      |
@@ -20,26 +40,9 @@
 | 用户中心-负责空间管理-查看、更新     |          |           |        | ✓     | ✓      |
 | 空间管理-新建、查看、更新、删除      |          |           |        |       | ✓      |
 
-SUPER
-walle的管理员：负责平台运维、开通空间并分配空间owner
-
-OWNER
-空间所有者：业务线负责，如大数据，新建项目并分配项目master，增加各方向leader作为空间master
-
-MASTER
-具体子方向leader、负责人：空间master可以
-
-10 => Guest access  
-20 => Reporter access  
-30 => Developer access  
-40 => Master access  
-50 => Owner access # Only valid for groups  
-
-
 
 ### 权限模型的解释
-- 用户的角色分为两种：group/role、project/role，当两者角色有冲突时，project/role具有更高优先级。
-- 一个space下只有一个group
-
-### 空间使用办法
-- 先分配空间，分配空间所有者，用户所有操作均是在一个空间下。空间id与登录用户id一同记录在session中，如果发生了切换空间，前端需要发起请求通知后端
+- 用户的角色分为两种：space/role、project/role。空间的Master权限是空间级别，项目的Master权限是项目级别
+- 一个空间space下只有一个用户组，由Owner管理，空间下的项目用户权限继承于空间用户组。但也可以单独设定项目的用户角色。
+- 一个用户必须先分配一个空间，方可登录系统。
+- 用户所有操作均在登录空间下，或有多个空间可以切换

@@ -97,3 +97,15 @@ flask db upgrade
 ```
 sh admin.sh start  # start with debug mode
 ```
+
+
+## 9.开启walle 2.0之旅
+浏览器打开`http://admin.walle-web.io`（因nginx配置域名而定）
+
+
+## 10.账号
+超管：super@walle-web.io Walle123
+所有者：owner@walle-web.io Walle123
+负责人：master@walle-web.io Walle123
+开发者：developer@walle-web.io Walle123
+访客：reporter@walle-web.io Walle123
