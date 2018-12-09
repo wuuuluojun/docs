@@ -1,7 +1,6 @@
 title: 安装
 ---
 
-# Developer
 ## 1.给此项目标个星star
 克隆项目前，请到github给此项目标个星star，不吝支持我们。
 
