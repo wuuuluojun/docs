@@ -1,4 +1,4 @@
 home: /{lang}
-docs: /docs/2/{lang}
+docs: /docs/{lang}
 news: /news/
 about: /about
