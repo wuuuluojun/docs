@@ -66,7 +66,7 @@ vi /etc/hosts
 ```
 
 ## 5.Config environment
-安装pip。{PROJECT} 默认指项目。 | install pip. {PROJECT} means walle
+安装**Python 2.7** + `pip`。``{PROJECT}`` 默认指项目。
 ```
 pip install virtualenv
 
