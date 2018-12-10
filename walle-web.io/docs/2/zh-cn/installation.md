@@ -15,12 +15,12 @@ git clone https://github.com/meolu/walle-web.git
 别忘了要重启nginx，注意标出可能需要改的地方
 ```
 upstream webservers {
-    server dev.admin.walle-web.io:5000 weight=1; #域名设置
+    server admin.walle-web.io:5000 weight=1; #域名设置
 }
 
 server {
     listen       80;
-    server_name  api.walle-web.io dev.admin.walle-web.io; # 域名设置
+    server_name  admin.walle-web.io; # 域名设置
     access_log   /usr/local/nginx/logs/walle.log main;
     index index.html index.htm; # 日志目录
 
@@ -62,7 +62,7 @@ server {
 vi /etc/hosts
 
 # add one line
-127.0.0.1  dev.admin.walle-web.io # 与nginx配置一致
+127.0.0.1  admin.walle-web.io # 与nginx配置一致
 ```
 
 ## 5.Config environment
