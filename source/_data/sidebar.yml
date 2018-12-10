@@ -3,10 +3,12 @@ docs1:
   getting_started:
     overview: index.html
     architecture: architecture.html
+    permission: permission.html
     dependency: dependency.html
     installation: installation.html
     upgrade: upgrade.html
     install_error: install-error.html
+    troubleshooting: troubleshooting.html
   configuration:
     git_configuration: git-configuration.html
     svn_configuration: svn-configuration.html
@@ -20,7 +22,6 @@ docs1:
   customization:
     local: local.html
   miscellaneous:
-    troubleshooting: troubleshooting.html
     contributing: contributing.html
     releases: releases.html
 

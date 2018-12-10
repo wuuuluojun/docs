@@ -5,7 +5,7 @@ lang: en
 .Requirements：
 --------------
 
-* The ssh-key of the user of php process in host should be added to github/gitlab/bitbucket's ssh-keys. Of course you can specify the repo url input like this: `https://username:password@github.com/meolu/walle-web.git`, but it is not recommended.
+* The ssh-key of the user of php process in host should be added to github/gitlab/bitbucket's ssh-keys. Of course you can specify the repo url input like this: `https://username:password@github.com/meolu/walle-web-v1.x.git`, but it is not recommended.
     * how to find out the user of php process:
 
         ```

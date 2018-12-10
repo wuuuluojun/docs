@@ -14,7 +14,7 @@ title: 贡献代码
 
 ### 流程
 
-1. Fork [meolu/walle-web](https://github.com/meolu/walle-web) 到本地.
+1. Fork [meolu/walle-web](https://github.com/meolu/walle-web-v1.x) 到本地.
 2. 创建新的分支：
 
     {% code %}
@@ -52,6 +52,6 @@ title: 贡献代码
 
 ## 报告 Bug
 
-当你在使用过程中遇到问题，请查阅 [疑难解答](https://walle-web.io/docs/troubleshooting.html) 或者在这里提问 [GitHub](https://github.com/meolu/walle-web/issues). 如果还是不能解决你的问题，请到 GitHub 联系我们。
+当你在使用过程中遇到问题，请查阅 [疑难解答](https://walle-web.io/docs/1/troubleshooting.html) 或者在这里提问 [GitHub](https://github.com/meolu/walle-web-v1.x/issues). 如果还是不能解决你的问题，请到 GitHub 联系我们。
 
 [meolu/walle-web]: https://github.com/meolu/walle-web

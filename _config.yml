@@ -29,6 +29,7 @@ per_page: 0
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 theme: walle
+donate: true
 
 swiftype_key: URYXMYgtQuEhNHNY8d-F
 # google_analytics: UA-84471165-1
