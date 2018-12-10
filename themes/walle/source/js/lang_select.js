@@ -11,8 +11,8 @@
       window.location.pathname = window.location.pathname.replace(/(zh-cn|en)/g, lang).replace('//', '/');
     } else {
       var pathname=window.location.pathname
-      var match = pathname.match(/docs\/2?/)[0]
-      window.location.pathname=pathname.replace(/docs\/2?/g, match+'/'+lang+'/').replace('//', '/');
+      var match = pathname.match(/docs\/1?/)[0]
+      window.location.pathname=pathname.replace(/docs\/1?/g, match+'/'+lang+'/').replace('//', '/');
     }
   }
 

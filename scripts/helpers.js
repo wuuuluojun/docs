@@ -16,9 +16,17 @@ function replaceLangInPath (path, lang, keepCN) {
   return path.replace(/(zh-cn|en|\{lang\})/g, lang).replace('//', '/');
 }
 
+function getVersionInPath (path){
+  var match=path.match(/docs\/[1|2]?/)[0]
+  var key = match.split('/')[1]
+  key = key ? key : 2
+  return key
+}
+
 hexo.extend.helper.register('page_nav', function(){
   var type = this.page.canonical_path.split('/')[0];
-  var sidebar = this.site.data.sidebar[type];
+  var version = getVersionInPath(this.page.canonical_path)
+  var sidebar = this.site.data.sidebar[`${type}${version}`];
   var path = pathFn.basename(this.path);
   var list = {};
   var prefix = 'sidebar.' + type + '.';
@@ -47,8 +55,9 @@ hexo.extend.helper.register('page_nav', function(){
 });
 
 hexo.extend.helper.register('doc_sidebar', function(className){
+  var version = getVersionInPath(this.page.canonical_path)
   var type = this.page.canonical_path.split('/')[0];
-  var sidebar = this.site.data.sidebar[type];
+  var sidebar = this.site.data.sidebar[`${type}${version}`];
   var path = pathFn.basename(this.path);
   var result = '';
   var self = this;
@@ -143,7 +152,7 @@ hexo.extend.helper.register('lang_name', function(lang){
 });
 
 hexo.extend.helper.register('current_version', function(){
-  var key = this.page.canonical_path.split('/')[1]
+  var key = getVersionInPath(this.page.canonical_path)
   var name = this.site.data.version.list[key];
   return {
     key: key,
