@@ -8,3 +8,5 @@ title: 安装错误
 - [提Issue](https://github.com/meolu/walle-web/issues/new/choose)
 - 加微信群，互帮互助
 ![](/docs/2/zh-cn/static/group-wechat.jpg)
+
+测试
