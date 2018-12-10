@@ -65,23 +65,22 @@ server {
 ```
 vi /etc/hosts
 
-# add one line
+# 新增一行
 127.0.0.1  admin.walle-web.io # 与nginx配置一致
 ```
 
-## 5.Config environment
-安装**Python 2.7** + `pip`。``{PROJECT}`` 默认指项目。
+## 5.Install
+安装**Python 2.7** + `pip`。
 ```
-pip install virtualenv
+sh admin.sh init
 
-cd {PROJECT}
-virtualenv venv
-source venv/bin/activate
-pip install -r requirements/prod.txt
+# 注意:安装失败请指定python路径. mac 可能会有用anaconda的python，找到自己系统的python 2.7追加参数指定 -p /usr/bin/python2.7 即可
+vi admin.sh +20
+virtualenv --no-site-packages -p /usr/local/bin/python2.7 venv
 ```
 
-## 6.Config code
-You will know to change what to suit for you environment
+## 6.Config setting
+带 **@TODO** 就是可能要修改的地方
 ```
 vi walle/config/settings_prod.py
 ```
@@ -110,8 +109,7 @@ mysql  -hxx -uxx -p -e'CREATE SCHEMA walle'
 ```
 8.2Data Migration
 ```
-export FLASK_APP=waller.py
-flask db upgrade
+sh admin.sh migration
 ```
 
 ## 9.Start
@@ -128,7 +126,7 @@ sh admin.sh migration # Migration
 
 
 ## 10.开启walle 2.0之旅
-浏览器打开`http://admin.walle-web.io`（因nginx配置域名而定）。登录账号如下：
+恭喜你，大功告成！浏览器打开`http://admin.walle-web.io`（因nginx配置域名而定）。登录账号如下，开启你的walle 2.0之旅吧：）
 ```
 超管：super@walle-web.io Walle123
 所有者：owner@walle-web.io Walle123
