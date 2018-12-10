@@ -62,7 +62,7 @@ after_script:
   - cd ..
   - cp -rf public/docs/1/zh-cn/* public/docs/1/
   - cp -rf public/docs/2/zh-cn/* public/docs/2/
-  - mv -f public/docs/2/* public/docs/
+  - cp -rf public/docs/2/* public/docs/
   - cp -rf public/* .deploy_git/
   - cd .deploy_git
   - git add -A
