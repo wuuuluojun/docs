@@ -9,4 +9,4 @@ title: 安装错误
 - 加微信群，互帮互助
 ![](/docs/2/zh-cn/static/group-wechat.jpg)
 
-测试
+
