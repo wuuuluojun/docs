@@ -9,7 +9,7 @@ title: 安装错误
 执行`sh admin.sh migration` 后，提示Can`t connet to local MYSQL server through socket "/var/lib/mysql/mysql.sock"，可将mysql.sock做一个软连接，比如mysql.sock文件在/usr/local/mysql/mysqld.sock，则执行ln -s /usr/local/mysqld.sock /var/lib/mysql/mysql.sock 即可
 
 ## mysqlclient install failed
-执行`sh admin.sh migration`，其中在安装mysqlclient包时，`pip install -r requirements/prod.txt`后提示mysqlclient安装失败
+执行`sh admin.sh migration`，其中在安装mysqlclient包时，`pip install -r requirements/prod.txt`<kbd>后提示mysqlclient安装失败</kbd>
 
 解决：CENTOS下安装执行 yum install mysql-devel 即可
 
