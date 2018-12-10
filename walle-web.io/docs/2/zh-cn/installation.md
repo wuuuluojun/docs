@@ -86,30 +86,53 @@ You will know to change what to suit for you environment
 vi walle/config/settings_prod.py
 ```
 
-## 7.Data Migration
-7.1创建一个数据库 walle
+## 7 本地SSH免密码登录
+```
+# 准备启动walle的用户 A
+# walle/config/settings_prod.py LOCAL_SERVER_USER B
+# 配置 A => B 免密码登录
+
+# if A == B
+[A@127.0.0.1] cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
+# else
+[A@127.0.0.1] cat ~/.ssh/id_rsa.pub  # 复制
+[B@127.0.0.1] vi ~/.ssh/authorized_keys # 粘贴
+
+```
+更多免密码登录配置方法：[SSH 免密码登录](http://walle-web.io/docs/2/troubleshooting.html#Authentication-failed)
+
+
+## 8.Data Migration
+8.1创建一个数据库 walle
 ```
 mysql  -hxx -uxx -p -e'CREATE SCHEMA walle'
 ```
-7.2Data Migration
+8.2Data Migration
 ```
 export FLASK_APP=waller.py
 flask db upgrade
 ```
 
-## 8.Start
+## 9.Start
+9.1 启动
 ```
-sh admin.sh start  # start with debug mode
+sh admin.sh start
+```
+9.2 重启、升级、Migration
+```
+sh admin.sh restart # 重启
+sh admin.sh upgrade # 升级
+sh admin.sh migration # Migration
 ```
 
 
-## 9.开启walle 2.0之旅
-浏览器打开`http://admin.walle-web.io`（因nginx配置域名而定）
-
-
-## 10.账号
+## 10.开启walle 2.0之旅
+浏览器打开`http://admin.walle-web.io`（因nginx配置域名而定）。登录账号如下：
+```
 超管：super@walle-web.io Walle123
 所有者：owner@walle-web.io Walle123
 负责人：master@walle-web.io Walle123
 开发者：developer@walle-web.io Walle123
 访客：reporter@walle-web.io Walle123
+```
