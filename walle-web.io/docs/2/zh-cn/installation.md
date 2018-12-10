@@ -8,7 +8,7 @@ title: 安装
 
 ## 2.Clone code
 ```
-git clone git@github.com:meolu/walle-web.git
+git clone https://github.com/meolu/walle-web.git
 ```
 
 ## 3.Nginx config
