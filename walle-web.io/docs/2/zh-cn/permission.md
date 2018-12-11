@@ -2,7 +2,7 @@
 ---
 ## 权限模型角色
 
-![permission](docs/2/zh-cn/static/permission.png)
+![permission](/docs/2/zh-cn/static/permission.png)
 
 ### SUPER 超管
 walle的管理员：负责平台运维、开通空间并分配空间owner
