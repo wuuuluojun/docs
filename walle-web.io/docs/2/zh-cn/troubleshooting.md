@@ -44,4 +44,4 @@ socket.error: [Errno 49] Can't assign requested address: ('admin.walle-web.io', 
 原因分析：服务启动时连接域名或ip失败
 解决方法：nginx、hosts配置、setting_prod.py的域名配置一致，且ping通。
 
-99.9%的人都会粗心，你不是第一个，也不会是第一个。
+99.9%的人都会粗心，你不是第一个，也不会是最后一个。
