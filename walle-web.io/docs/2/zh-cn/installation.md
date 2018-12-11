@@ -111,19 +111,19 @@ mysql  -hxx -uxx -p -e'CREATE SCHEMA walle'
 ```
 8.2Data Migration
 ```
-sh admin.sh migration
+./admin.sh migration
 ```
 
 ## 9.Start
 9.1 启动
 ```
-sh admin.sh start
+./admin.sh start
 ```
 9.2 重启、升级、Migration
 ```
-sh admin.sh restart # 重启
-sh admin.sh upgrade # 升级
-sh admin.sh migration # Migration
+./admin.sh restart # 重启
+./admin.sh upgrade # 升级
+./admin.sh migration # Migration
 ```
 
 
