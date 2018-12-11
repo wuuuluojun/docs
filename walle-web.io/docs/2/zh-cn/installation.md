@@ -72,8 +72,10 @@ vi /etc/hosts
 ## 5.Install
 安装**Python 2.7** + `pip`。
 ```
-sh admin.sh init
+chmod +x admin.sh
+./admin.sh init
 
+# 注意：安装mysqlclient失败，需要先安装libmysqlclient-dev(ubuntu)
 # 注意:安装失败请指定python路径. mac 可能会有用anaconda的python，找到自己系统的python 2.7追加参数指定 -p /usr/bin/python2.7 即可
 vi admin.sh +20
 virtualenv --no-site-packages -p /usr/local/bin/python2.7 venv
