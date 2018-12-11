@@ -13,6 +13,14 @@ title: 安装错误
 
 解决：CENTOS下安装执行 yum install mysql-devel 即可
 
+## OSError: Command  setuptools failed
+```OSError: Command venv/bin/python - setuptools pip wheel failed with error code 1
+```
+mac 可能会有用anaconda的python，这个版本的python不支持virtualenv，[issue](https://github.com/pypa/virtualenv/issues/788)
+
+解决办法：安装失败在 `admin.sh` > `init` 方法 > `-p`参数 指定python路径：
+`virtualenv --no-site-packages -p /usr/local/bin/python2.7 venv`
+
 ## 其它问题
 - [提Issue](https://github.com/meolu/walle-web/issues/new/choose)
 - 加微信群，互帮互助
