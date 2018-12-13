@@ -21,7 +21,7 @@ sidebar:
     getting_started: 快速开始
     overview: 概述
     architecture: 原理分析
-    dependency: 依赖
+    dependency: 依赖检查
     installation: 安装
     upgrade: 升级
     permission: 权限模型

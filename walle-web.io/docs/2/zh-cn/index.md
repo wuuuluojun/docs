@@ -52,6 +52,6 @@ title: walle 2.0 瓦力
 
 
 ## 打赏作者杯咖啡
-你也不一定要赞赏，芸芸众生，相遇相识是一种缘份。不过可以给点个star，或者关注公众号，哈哈
+你也不一定要赞赏，芸芸众生，相遇相识是一种缘份。不过可以给点个[star](https://github.com/meolu/walle-web)，或者关注公众号，哈哈
 
 <img src="https://raw.githubusercontent.com/meolu/walle-web/master/screenshot/appreciation-wechat.jpg" width="220" height="220" alt="赞赏码" />

@@ -21,6 +21,16 @@ mac 可能会有用anaconda的python，这个版本的python不支持virtualenv�
 解决办法：安装失败在 `admin.sh` > `init` 方法 > `-p`参数 指定python路径：
 `virtualenv --no-site-packages -p /usr/local/bin/python2.7 venv`
 
+##I mportError: libmysqlclient.so.20
+执行数据库初始化报错：
+```
+sh admin.sh migration
+ImportError: libmysqlclient.so.20: cannot open shared object file: No such file or directory
+```
+解决：找到libmysqlclient.so.20 文件，进行软连接 `ln -s /usr/local/mysql/lib/libmysqlclient.so.20 /usr/lib64/libmysqlclient.so.20` 即可。
+
+感谢[xxw2016](https://github.com/xxw2016)
+
 ## 其它问题
 - [提Issue](https://github.com/meolu/walle-web/issues/new/choose)
 - 加微信群，互帮互助
