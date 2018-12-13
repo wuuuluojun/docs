@@ -21,7 +21,7 @@ mac 可能会有用anaconda的python，这个版本的python不支持virtualenv�
 解决办法：安装失败在 `admin.sh` > `init` 方法 > `-p`参数 指定python路径：
 `virtualenv --no-site-packages -p /usr/local/bin/python2.7 venv`
 
-##I mportError: libmysqlclient.so.20
+## ImportError: libmysqlclient.so.20
 执行数据库初始化报错：
 ```
 sh admin.sh migration
