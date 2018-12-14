@@ -29,7 +29,7 @@ ImportError: libmysqlclient.so.20: cannot open shared object file: No such file 
 ```
 解决：找到libmysqlclient.so.20 文件，进行软连接 `ln -s /usr/local/mysql/lib/libmysqlclient.so.20 /usr/lib64/libmysqlclient.so.20` 即可。
 
-感谢[xxw2016](https://github.com/xxw2016)
+感谢[xxw2016](https://github.com/xxw2016)提交issue/pr
 
 ## 其它问题
 - [提Issue](https://github.com/meolu/walle-web/issues/new/choose)

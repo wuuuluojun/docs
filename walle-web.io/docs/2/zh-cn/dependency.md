@@ -14,7 +14,7 @@ walle 2.0 相比 [walle-v1.x](https://walle-web.io/docs/1) 安装更为方便，
 
 ## 有些前置的基础包可以装下
 
-以下是基于`CentOS 7.6.1810`安装，感谢[warnwinter](https://github.com/warmwinter)提供。如果有什么问题找他：）
+以下是基于`CentOS 7.6.1810`安装，感谢[warnwinter](https://github.com/warmwinter)issue/pr提供。如果有什么问题找他：）
 
 - 安装的系统自身的mariaDB(未验证)
 
