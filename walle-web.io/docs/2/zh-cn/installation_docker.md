@@ -1,5 +1,7 @@
 title: Docker安装
 ---
+## 鸣谢
+此篇由[夜行书生](https://github.com/owen-carter)贡献，为社区提供了 Docker 版本。人人为我，我为人人！而且极其注重细节，甚至细腻到中英文之间的控制。
 
 ## About Docker
 Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
@@ -69,10 +71,10 @@ class ProdConfig(Config):
 
     # .....
     # .....
-    
+
     # todo 数据库设置
     SQLALCHEMY_DATABASE_URI = 'mysql://user:password@localhost/walle'
-        
+
 ```
 ```yaml
 version: "3.6"
@@ -131,7 +133,7 @@ docker-compose build && docker-compose up -d && docker-compose logs -f
 # 构建服务
 docker-compose build
 # 启动服务,启动过程中可以直接查看终端日志，观察启动是否成功
-docker-compsoe up 
+docker-compsoe up
 # 启动服务在后台，如果确认部署成功，则可以使用此命令，将应用跑在后台，作用类似 nohup python waller.py &
 docker-compose up -d
 # 查看日志,效果类似 tail -f waller.log
