@@ -72,8 +72,10 @@ vi /etc/hosts
 ## 5.Install
 安装**Python 2.7** + `pip`。
 ```
-sh admin.sh init
+chmod +x admin.sh
+./admin.sh init
 
+# 注意：安装mysqlclient失败，需要先安装libmysqlclient-dev(ubuntu)
 # 注意:安装失败请指定python路径. mac 可能会有用anaconda的python，找到自己系统的python 2.7追加参数指定 -p /usr/bin/python2.7 即可
 vi admin.sh +20
 virtualenv --no-site-packages -p /usr/local/bin/python2.7 venv
@@ -109,19 +111,19 @@ mysql  -hxx -uxx -p -e'CREATE SCHEMA walle'
 ```
 8.2Data Migration
 ```
-sh admin.sh migration
+./admin.sh migration
 ```
 
 ## 9.Start
 9.1 启动
 ```
-sh admin.sh start
+./admin.sh start
 ```
 9.2 重启、升级、Migration
 ```
-sh admin.sh restart # 重启
-sh admin.sh upgrade # 升级
-sh admin.sh migration # Migration
+./admin.sh restart # 重启
+./admin.sh upgrade # 升级
+./admin.sh migration # Migration
 ```
 
 
