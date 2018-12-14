@@ -5,12 +5,10 @@ title: Docker安装
 Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
 
 
-## Install Docker
-> 参考：https://docs.docker.com/install/linux/docker-ce
-
-
-- Centos
-> [https://docs.docker.com/install/linux/docker-ce/centos](https://docs.docker.com/install/linux/docker-ce/centos)
+## [Install Docker](https://docs.docker.com/install/linux/docker-ce)
+我们重点说明docker在centos和ubuntu操作系统下的安装和使用，Mac下安装比较简单，直接下载dmg镜像安装即可，使用和centos，ubuntu基本无异，
+不推荐在windows下部署，会有文件路径问题抽风。
+- [Centos系统](https://docs.docker.com/install/linux/docker-ce/centos)
 ```bash
 sudo yum install -y yum-utils  device-mapper-persistent-data lvm2
 sudo yum-config-manager --add-repo  https://download.docker.com/linux/centos/docker-ce.repo
@@ -20,8 +18,7 @@ sudo systemctl start docker
 ```
 
 
-- Ubuntu
-> 参考：[https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+- [Ubuntu系统](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 ```bash
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
@@ -33,36 +30,31 @@ sudo add-apt-repository \
    stable"
 sudo apt-get update   
 sudo apt-get install docker-ce
-
-
 ```
 
-- Mac
+- [Mac系统](https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-for-mac)
 
 [https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-for-mac](https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-for-mac)
 
-
-- Windows
+- [Windows](https://docs.docker.com/docker-for-windows/install/#start-docker-for-windows)
 
 [https://docs.docker.com/docker-for-windows/install/#start-docker-for-windows](https://docs.docker.com/docker-for-windows/install/#start-docker-for-windows)
 
-## Install docker-compose
-> 参考：https://docs.docker.com/compose/overview/
-- about docker-compose
-docker-compose是Docker的服务编排工具，主要用来构建基于Docker的复杂应用，
-docker-compose通过一个配置文件来管理多个Docker容器，非常适合组合使用多个容器进行部署的场景
 
 
-- install docker-compose
+## [Install docker-compose](https://docs.docker.com/compose/overview/)
+
+install [docker-compose](https://docs.docker.com/compose/overview/)
 ```bash
 pip install docker-compose -i https://mirrors.aliyun.com/pypi/simple/
 ```
 
 
-### Prepare Before Deploy
-> 修改配置文件
-```python
 
+## Prepare Before Deploy
+
+修改settings_prod.py
+```python
 # walle/config/settings_prod.py:17
 class ProdConfig(Config):
     """Production configuration."""
@@ -74,6 +66,8 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'mysql://user:password@localhost/walle'
         
 ```
+
+修改docker-compose.yml
 ```yaml
 version: "3.6"
 
@@ -109,6 +103,8 @@ services:
       - mysql
       - web
     ports:
+      # 如果宿主机80端口被占用，可自行修改为其他port(>=1024)
+      # 0.0.0.0:要绑定的宿主机端口:docker容器内端口80
       - 0.0.0.0:80:80
     volumes:
       - ./fe/:/data/web/:ro
@@ -117,12 +113,13 @@ services:
 
 ```
 
-### Start
-> 万事俱备，只欠东风
+
+## Start
 
 - 一键启动（快速体验）
 ```bash
 docker-compose build && docker-compose up -d && docker-compose logs -f
+# 打开浏览器localhost:80
 ```
 
 
