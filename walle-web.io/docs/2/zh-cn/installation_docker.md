@@ -10,7 +10,7 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 
 - Centos
-> https://docs.docker.com/install/linux/docker-ce/centos
+> [https://docs.docker.com/install/linux/docker-ce/centos](https://docs.docker.com/install/linux/docker-ce/centos)
 ```bash
 sudo yum install -y yum-utils  device-mapper-persistent-data lvm2
 sudo yum-config-manager --add-repo  https://download.docker.com/linux/centos/docker-ce.repo
@@ -21,21 +21,30 @@ sudo systemctl start docker
 
 
 - Ubuntu
+> 参考：[https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 ```bash
+sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+sudo apt-get update   
+sudo apt-get install docker-ce
+
 
 ```
-
 
 - Mac
-```bash
 
-```
+[https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-for-mac](https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-for-mac)
 
 
 - Windows
-```bash
 
-```
+[https://docs.docker.com/docker-for-windows/install/#start-docker-for-windows](https://docs.docker.com/docker-for-windows/install/#start-docker-for-windows)
 
 ## Install docker-compose
 > 参考：https://docs.docker.com/compose/overview/
@@ -52,7 +61,61 @@ pip install docker-compose -i https://mirrors.aliyun.com/pypi/simple/
 
 ### Prepare Before Deploy
 > 修改配置文件
+```python
 
+# walle/config/settings_prod.py:17
+class ProdConfig(Config):
+    """Production configuration."""
+
+    # .....
+    # .....
+    
+    # todo 数据库设置
+    SQLALCHEMY_DATABASE_URI = 'mysql://user:password@localhost/walle'
+        
+```
+```yaml
+version: "3.6"
+
+services:
+
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 0.0.0.0:3306:3306
+    expose:
+      - 3306
+    environment:
+      # todo 数据库root密码，这个如果需要修改，需要和 walle/config/settings_prod.py 中数据库密码保持一致
+      MYSQL_ROOT_PASSWORD: walle
+      MYSQL_DATABASE: walle
+    volumes:
+      - ${HOME}/.walle/mysql:/var/lib/mysql
+    restart: always
+
+  web:
+    build: ./
+    links:
+      - mysql
+    expose:
+      - 5000
+    environment:
+      - WALLE_SECRET="guess me out"
+    restart: always
+
+  gateway:
+    image: nginx
+    links:
+      - mysql
+      - web
+    ports:
+      - 0.0.0.0:80:80
+    volumes:
+      - ./fe/:/data/web/:ro
+      - ./gateway/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: always
+
+```
 
 ### Start
 > 万事俱备，只欠东风
