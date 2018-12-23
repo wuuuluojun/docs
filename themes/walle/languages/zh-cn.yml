@@ -22,7 +22,7 @@ sidebar:
     overview: 概述
     architecture: 原理分析
     dependency: 依赖检查
-    installation: 手工安装
+    installation: 标准安装
     installation_docker: Docker安装
     upgrade: 升级
     permission: 权限模型
