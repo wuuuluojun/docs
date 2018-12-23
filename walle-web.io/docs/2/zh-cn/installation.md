@@ -19,7 +19,7 @@ git clone https://github.com/meolu/walle-web.git
 别忘了要重启nginx，注意标出可能需要改的地方
 ```
 upstream webservers {
-    server admin.walle-web.io:5000 weight=1; #域名设置
+    server 0.0.0.0:5000 weight=1; #域名设置
 }
 
 server {
@@ -31,7 +31,7 @@ server {
     location / {
         try_files $uri $uri/ /index.html;
         add_header access-control-allow-origin *;
-        root /walle-web/fe; # 前端代码
+        root /walle-web/fe; # 前端代码已集成到walle-web，即walle-web/fe的绝对路径
     }
 
     location ^~ /api/ {
