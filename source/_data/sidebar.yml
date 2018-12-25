@@ -38,6 +38,7 @@ docs2:
     troubleshooting: troubleshooting.html
   configuration:
     user_configuration: user-configuration.html
+    configuration_java: configuration_java.html
     configuration_error: configuration-error.html
   getting_deploy:
     submit_bill: submit-bill.html

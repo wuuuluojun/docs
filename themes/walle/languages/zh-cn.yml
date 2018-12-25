@@ -31,6 +31,7 @@ sidebar:
     git_configuration: Git项目配置
     task_configuration: 高级任务配置
     user_configuration: 项目用户配置
+    configuration_java: Java项目配置模板
     configuration_error: 检测错误
     getting_deploy: 上线使用
     submit_bill: 提交上线单
