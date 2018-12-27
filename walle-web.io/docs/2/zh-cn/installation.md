@@ -122,7 +122,7 @@ mysql  -hxx -uxx -p -e'CREATE SCHEMA walle'
 9.2 重启、升级、Migration
 ```
 ./admin.sh restart # 重启
-./admin.sh upgrade # 升级
+./admin.sh upgrade # 升级walle，升级完需要重启walle服务。升级前最好 git stash 暂存本地修改，升级后git stash pop弹出暂存，然后重启服务。
 ./admin.sh migration # Migration
 ```
 
