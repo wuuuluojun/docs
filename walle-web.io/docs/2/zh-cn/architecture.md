@@ -18,9 +18,8 @@ title: 原理分析
 ![permission](/docs/2/zh-cn/static/user-relations.png)
 
 
-- A 能免密码登录B（**A == B 更简便**，但也需要把key加入到自己的信任列表
-- B 能密码登录所有服务器（把B的key加入其它机器信任列表）
-- B 能拉git代码（把B的key加入git信任列表）
+- A 能密码登录所有服务器（把A的key加入其它机器信任列表）
+- A 能拉git代码（把A的key加入git信任列表）
 - 免密码登录三个条件
   - ~ 755
   - ~/.ssh 700
