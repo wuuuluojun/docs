@@ -5,7 +5,7 @@ title: 问题解答
 ### 提问之前
 
 - 懂得配置lnmp，不懂请百度google，莫在群里提问lnmp相关问题
-- 具备 PHP 基础知识：php 5.4与5.3基本区别，composer 
+- 具备 PHP 基础知识：php 5.4与5.3基本区别，composer
 - 会使用 git 操作：git pull, git stash
 - 熟悉 PHP 常见的知识：composer 的使用
 - 了解基本的 HTTP 协议，Header 头、请求方式（GET\POST\PUT\PATCH\DELETE）等
@@ -170,7 +170,7 @@ cat /etc/passwd | grep www # 查看是否为 /sbin/nolgin
 
 解决办法：
 ```
-vipw /etc/passwd
+vim /etc/passwd
 修改/sbin/nolgin为/bin/bash
 ```
 

@@ -24,7 +24,7 @@ composer install  # 如果缺少bower-asset的话， 先安装：composer global
 ----------
 ```
 mkdir -p /data/www/walle-web && cd /data/www/walle-web  # 新建目录
-git clone git@github.com:meolu/walle-web-v1.x.git .          # 代码检出
+git clone https://github.com/meolu/walle-web-v1.x.git .          # 代码检出
 ```
 
 
@@ -99,7 +99,5 @@ server {
 --------
 访问地址：localhost
 
-当然，可能你配置nginx时的server_name是walle.company.com时，配置本地hosts之后，直接访问：walle.company.com亦可。
-
-
-
+当然，可能你配置nginx时的server_name是walle.company.com时，配置本地hosts之后，直接访问：walle.company.com亦可。  
+初始化管理员账号密码为：admin/admin，初始化开发者账号密码为：demo/demo
