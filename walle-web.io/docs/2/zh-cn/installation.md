@@ -87,39 +87,24 @@ virtualenv --no-site-packages -p /usr/local/bin/python2.7 venv
 vi walle/config/settings_prod.py
 ```
 
-## 7 本地SSH免密码登录
-```
-# 准备启动walle的用户 A
-# walle/config/settings_prod.py LOCAL_SERVER_USER B
-# 配置 A => B 免密码登录
+## 7.Data Migration
+7.0 ** MySQL 5.6.5以上**，否则会在安装时报错。在MySQL 5.6.5版本之前，Automatic Initialization and Updating只适用于TIMESTAMP，而且一张表中，最多允许一个TIMESTAMP字段采用该特性。从MySQL 5.6.5开始，Automatic Initialization and Updating同时适用于TIMESTAMP和DATETIME，且不限制数量。
 
-# if A == B
-[A@127.0.0.1] cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-
-# else
-[A@127.0.0.1] cat ~/.ssh/id_rsa.pub  # 复制
-[B@127.0.0.1] vi ~/.ssh/authorized_keys # 粘贴
-
-```
-更多免密码登录配置方法：[SSH 免密码登录](http://walle-web.io/docs/2/troubleshooting.html#Authentication-failed)
-
-
-## 8.Data Migration
-8.1创建一个数据库 walle
+7.1 创建一个数据库 walle
 ```
 mysql  -hxx -uxx -p -e'CREATE SCHEMA walle'
 ```
-8.2Data Migration
+7.2 Data Migration
 ```
 ./admin.sh migration
 ```
 
-## 9.Start
-9.1 启动
+## 8.Start
+8.1 启动
 ```
 ./admin.sh start
 ```
-9.2 重启、升级、Migration
+8.2 重启、升级、Migration
 ```
 ./admin.sh restart # 重启
 ./admin.sh upgrade # 升级walle，升级完需要重启walle服务。升级前最好 git stash 暂存本地修改，升级后git stash pop弹出暂存，然后重启服务。
@@ -127,7 +112,7 @@ mysql  -hxx -uxx -p -e'CREATE SCHEMA walle'
 ```
 
 
-## 10.开启walle 2.0之旅
+## 9.开启walle 2.0之旅
 恭喜你，大功告成！浏览器打开`http://admin.walle-web.io`（因nginx配置域名而定）。登录账号如下，开启你的walle 2.0之旅吧：）
 ```
 超管：super@walle-web.io Walle123
