@@ -6,7 +6,7 @@ title: 安装
 务必部署在内网！  
 
 ## 1.请给此项目标个星star
-克隆项目前，请到github给此项目标个星star，不吝支持我们。
+克隆项目前，请到[github - walle](https://github.com/meolu/walle-web)给此项目标个星star，不吝支持我们。
 
 反过来正是你的微不足道的支持，让我们坚持免费开源做下去，反馈于你，感谢你的信任。
 
