@@ -3,7 +3,9 @@ title: walle 2.0 瓦力
 [![Build Status](https://travis-ci.org/meolu/walle-web.svg?branch=master)](https://travis-ci.org/meolu/walle-web)
 
 
-功能强大，且免费开源的`walle-web 瓦力`终于更新`2.0`了！但是，目前 `2.0` alpha版尚未达到企业完全可用状态。不过欢迎试用，请保持关注，我会在公众号更新（在文末）。
+walle 让用户代码发布终于可以不只能选择 jenkins！支持各种web代码发布，php、java、python、go等代码的发布、回滚可以通过web来一键完成。walle 一个可自由配置项目，更人性化，高颜值，支持git、多用户、多语言、多项目、多环境同时部署的开源上线部署系统。
+
+功能强大，且免费开源的`walle-web 瓦力`终于更新`2.0`了！占用了我几乎所有业余时间，精力与金钱付出换各位使用收益，望各位喜欢不吝顺手 `star` 以示支持，项目更好亦反馈予你。目前 `2.0.0` 即将发布，请保持关注，我会在公众号更新（在文末）。  
 
 特性
 =========================
@@ -20,7 +22,7 @@ title: walle 2.0 瓦力
 ![](https://raw.github.com/meolu/walle-web/master/screenshot/deploy.png)
 
 
-老版本已迁移到 [walle 1.x](https://github.com/meolu/walle-web-v1.x) 的同学**务必不要再更新了**，两个版本不兼容，到时我会写个迁移助手，淡定。
+老版本已迁移到 [walle 1.x](https://github.com/meolu/walle-web-v1.x) 的同学**务必不要再更新了**，两个版本不兼容
 
 最后，`walle 2.0`占用了我几乎所有业余时间，精力与金钱付出换各位免费使用。望各位喜欢不吝顺手 `star` 以示支持，项目更好亦反馈予你。赠人玫瑰，手留余香！
 
