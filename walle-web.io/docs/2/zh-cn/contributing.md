@@ -18,17 +18,17 @@ title: 贡献代码
 2. Clone 到你的本地：
 
     ```
-    $ git clone https://github.com/<username>/walle-web.git
+    $ git clone https://github.com/{username}/walle-web.git
     $ cd docs
     # 创建新的分支：
-    $ git checkout -b feature/<username>/dashboard
+    $ git checkout -b feature/{username}/dashboard
     {% endcode %}
     ```
 3. 编写代码。
 4. Push 到你的分支:
 
     {% code %}
-    $ git push origin feature/<username>/dashboard
+    $ git push origin feature/{username}/dashboard
     {% endcode %}
 
 5. 创建 Pull Request 并描述你完成的功能或者做出的修改。
@@ -45,10 +45,10 @@ title: 贡献代码
 2. Clone 到你的本地：
 
     ```
-    $ git clone https://github.com/<username>/docs.git
+    $ git clone https://github.com/{username}/docs.git
     $ cd docs
     # 创建新的分支：
-    $ git checkout -b feature/<username>/dashboard
+    $ git checkout -b feature/{username}/dashboard
     ```
 
 3. 创建新的分支，编辑文档
