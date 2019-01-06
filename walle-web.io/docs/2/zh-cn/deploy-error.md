@@ -1,6 +1,8 @@
 title: 部署出错
 ---
 
+walle运行过程，以及部署过程出错了，具体日志可以查看`logs/runtime.log`，别说你在启动walle的时候没注意到？
+
 ## git clone error
 Initialized empty Git repository in /tmp/walle/codebase/17/.git/
  error: while accessing https://github.com/meolu/java-deploy.git/info/refs
