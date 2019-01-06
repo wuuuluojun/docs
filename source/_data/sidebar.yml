@@ -39,8 +39,8 @@ docs2:
   configuration:
     configuration_user: configuration-user.html
     configuration_project: configuration-project.html
-    configuration_project_java: configuration_project_java.html
-    configuration_project_php: configuration_project_java.html
+    configuration_project_java: configuration-project-java.html
+    configuration_project_php: configuration-project-php.html
     configuration_error: configuration-error.html
   getting_deploy:
     submit_bill: submit-bill.html
