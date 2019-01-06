@@ -30,6 +30,7 @@ fi
 
 ```
 if [ -f /etc/bashrc ]; then
+  # 增加一行初始化
 	. /etc/profile
 	. /etc/bashrc
 fi
