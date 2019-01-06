@@ -16,7 +16,7 @@ fatal: HTTP request failed
 ## mvn command not found
 `/bin/bash: mvn: command not found`
 
-原因分析：如果是在宿主机里使用`mvn`编译，是因为没有把环境变量初始化，也就是大家常配置在`/etc/profile`里的`JAVA_HOME`、`MVN_HOME`、`PATH`，最简单的方式就是初始化下。
+原因分析：如果是在宿主机里使用`mvn`编译，是因为没有把环境变量初始化，也就是大家常配置在`/etc/profile`里的`JAVA_HOME`、`M2_HOME`、`PATH`，最简单的方式就是初始化下。
 
 一般用户登录Linux，会初始化`~/.bashrc`，`~/.bashrc`又会先初始化`/etc/bashrc`
 

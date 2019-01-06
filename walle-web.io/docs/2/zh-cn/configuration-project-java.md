@@ -35,3 +35,5 @@ ${TOMCAT_HOME}/bin/startup.sh
 SpringBoot的部署的方式有多种，有`java -jar xx.jar`，也有配置Tomcat部署方式，结合热部署、配置中心，以及ansible等方案。
 
 欢迎各位提issue交流，我看能不能对各位方案做针对性做`Java`统一模板。
+
+感谢[李庆海@麦子金服](https://extp.org/)提供之前一个版本。
