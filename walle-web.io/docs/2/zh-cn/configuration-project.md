@@ -28,8 +28,8 @@ title: 项目配置
 
 排除文件：
 ```
+.git
 *.log
-*.txt
 ```
 
 指定文件：
@@ -89,4 +89,15 @@ ${TOMCAT_HOME}/bin/startup.sh
 ```
 
 # 钉钉hook地址
-在钉钉群里添加机器web hook。这个就不用我写了吧
+在钉钉机器人管理页面选择“自定义”机器人，输入机器人名字并选择要发送消息的群。如果需要的话，可以为机器人设置一个头像，然后点击下一步
+
+![permission](/docs/2/zh-cn/static/dingding-create-1.png)
+
+头像可以使用下面图片，提在消息列表里高辨别度
+
+![permission](/docs/2/zh-cn/static/default.jpg)
+
+
+点击“复制”按钮，即可获得这个机器人对应的 WebHooks 地址，其格式如下
+
+![permission](/docs/2/zh-cn/static/dingding-create-2.png)

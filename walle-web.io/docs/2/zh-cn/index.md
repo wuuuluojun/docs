@@ -58,6 +58,7 @@ Roadmap
     - `CAS`
     - 冲刺`github` 7000 `star`（靠你们和你们的同事们了）
 
+![permission](/docs/2/zh-cn/static/roadmap.png)
 
 ## 新的惊喜
 后续更新和解剖讨论、以及walle有趣的人和事，将会放到公众号：walle-web，晨间除了写开源，也会写千字文，关注不迷路：）
