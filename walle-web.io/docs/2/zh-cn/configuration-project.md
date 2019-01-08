@@ -6,7 +6,9 @@ title: 项目配置
 ![permission](/docs/2/zh-cn/static/project_base.png)
 
 # Git Repo
-可以是https协议，可以是git协议。
+可以是https协议，如`https://github.com/meolu/walle-web.git`，可以是git协议，如`git@github.com:meolu/walle-web.git`
+
+![permission](/docs/2/zh-cn/static/git-repo.png)
 
 # 目标集群
 从左侧勾选，点中间选择到右边。我也不知道为什么要写这种说明。
