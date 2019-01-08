@@ -97,7 +97,8 @@ ${TOMCAT_HOME}/bin/startup.sh
 
 ![permission](/docs/2/zh-cn/static/default.jpg)
 
+![permission](/docs/2/zh-cn/static/dingding-create-2.png)
 
 点击“复制”按钮，即可获得这个机器人对应的 WebHooks 地址，其格式如下
 
-![permission](/docs/2/zh-cn/static/dingding-create-2.png)
+`https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx`
