@@ -33,7 +33,7 @@ walle 让用户代码发布终于可以不只能选择 jenkins！支持各种web
 
 ![部署原理](/docs/2/zh-cn/static/walle-flow-relation.jpg)
 
-![空间及权限原理](/docs/2/zh-cn/static/permission.jpg)
+![空间及权限原理](/docs/2/zh-cn/static/permission.png)
 
 
 老版本已迁移到 [walle 1.x](https://github.com/meolu/walle-web-v1.x) 的同学**务必不要再更新了**，两个版本不兼容
