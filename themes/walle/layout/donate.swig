@@ -11,7 +11,7 @@
             <h4>微信扫码即可打赏，档位都有 10元、20元、30元、50元、100元与<strong>土豪档</strong>，绝对赤裸裸的金钱打赏！</h4>
             <p>请您打赏同时留下您的姓名@公司（昵称也无所谓啦），以便于后期做列表使用 🌹😊</p>
             </div>
-            <img class="donate-img" src="{{ url_for('images/user/appreciation-wechat.jpg') }}"/>
+            <img class="donate-img" src="{{ url_for('/docs/2/zh-cn/static/appreciation-wechat.jpg') }}"/>
             <img class="donate-img" src="{{ url_for('/docs/2/zh-cn/static/hongbao.jpg') }}"/>
             <img class="donate-img" src="{{ url_for('images/user/wechat-gzh.jpg') }}"/>
           </div>
