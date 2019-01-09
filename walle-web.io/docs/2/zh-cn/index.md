@@ -3,7 +3,11 @@ title: walle 2.0 瓦力
 [![Build Status](https://travis-ci.org/meolu/walle-web.svg?branch=master)](https://travis-ci.org/meolu/walle-web)
 
 
-功能强大，且免费开源的`walle-web 瓦力`终于更新`2.0`了！但是，目前 `2.0` alpha版尚未达到企业完全可用状态。不过欢迎试用，请保持关注，我会在公众号更新（在文末）。
+walle 让用户代码发布终于可以不只能选择 jenkins！支持各种web代码发布，php、java、python、go等代码的发布、回滚可以通过web来一键完成。walle 一个可自由配置项目，更人性化，高颜值，支持git、多用户、多语言、多项目、多环境同时部署的开源上线部署系统。
+
+功能强大，且免费开源的`walle-web 瓦力`终于更新`2.0`了！占用了我几乎所有业余时间，精力与金钱付出换各位使用收益，望各位喜欢不吝顺手 `star` 以示支持，项目更好亦反馈予你。目前 `2.0.0` 已经发布，请保持关注，我会在公众号更新（在文末）。  
+
+另外，有推广资源（开源文章推荐、大会分享）的同学，请微信联系我，强烈需要帮助。
 
 特性
 =========================
@@ -20,30 +24,41 @@ title: walle 2.0 瓦力
 ![](https://raw.github.com/meolu/walle-web/master/screenshot/deploy.png)
 
 
-老版本已迁移到 [walle 1.x](https://github.com/meolu/walle-web-v1.x) 的同学**务必不要再更新了**，两个版本不兼容，到时我会写个迁移助手，淡定。
+老版本已迁移到 [walle 1.x](https://github.com/meolu/walle-web-v1.x) 的同学**务必不要再更新了**，两个版本不兼容
 
 最后，`walle 2.0`占用了我几乎所有业余时间，精力与金钱付出换各位免费使用。望各位喜欢不吝顺手 `star` 以示支持，项目更好亦反馈予你。赠人玫瑰，手留余香！
 
 
 ## Roadmap
+
+Roadmap
+=========================
 - [x] **预览版**  2018-12-02
     - ~~安装文档、前后端代码、Data Migration~~
 - [x] **Alpha** 2018-12-09
     - ~~使用文档、Trouble Shooting、公众号更新~~
-- **Beta** 2018-12-23 :santa:圣诞夜前夕
-    - `1.x`迁移到`2.0`脚本
-    - 接受官网logo企业的`Trouble Shooting`
-- **2.0.0**  2018-12-30 :one:元旦前夕
-    - released tag、使用文档
-    - 冲刺`github` 5000 `star`（靠你们了）
-- **2.0.1**  2019-01-13
-    - 项目检测、复制
-    - 任务的回滚
+- [x] **Beta** 2018-12-23 :santa:圣诞夜前夕
+    - ~~钉钉/邮件消息通知~~
+    - ~~接受官网logo企业的`Trouble Shooting`~~
+- [x] **2.0.0**  2018-12-30 :one:元旦前夕
+    - ~~项目检测、复制~~
+    - ~~任务的回滚~~
+    - ~~`released tag`、使用文档~~
+    - ~~`Docker` 镜像~~
+    - ~~Java配置模板~~
+    - ~~PHP配置模板~~
+    - ~~`github` 5000 `star`~~
+- [x] **2.0.1**  2019-01-13
+    - ~~项目配置添加自定义变量~~
+    - ~~Python 3.7+兼容~~
 - **2.0.2**  2019-01-20
-    - Dashboard（全新的玩法，欢迎提issue）
+    - `Dashboard`（全新的玩法，欢迎提issue）
+    - 在线PPT介绍
 - **2.1.0**  2019-01-27 :new:新年版
-    - CAS
-    - 冲刺`github` 6000 `star`（靠你们和你们的同事们了）
+    - `CAS`
+    - 冲刺`github` 7000 `star`（靠你们和你们的同事们了）
+
+![permission](/docs/2/zh-cn/static/roadmap.png)
 
 ## 新的惊喜
 后续更新和解剖讨论、以及walle有趣的人和事，将会放到公众号：walle-web，晨间除了写开源，也会写千字文，关注不迷路：）
@@ -52,6 +67,6 @@ title: walle 2.0 瓦力
 
 
 ## 打赏作者杯咖啡
-你也不一定要赞赏，芸芸众生，相遇相识是一种缘份。不过可以给点个star，或者关注公众号，哈哈
+你也不一定要赞赏，芸芸众生，相遇相识是一种缘份。不过可以给点个[star](https://github.com/meolu/walle-web)，或者关注公众号，哈哈
 
 <img src="https://raw.githubusercontent.com/meolu/walle-web/master/screenshot/appreciation-wechat.jpg" width="220" height="220" alt="赞赏码" />

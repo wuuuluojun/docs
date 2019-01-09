@@ -21,15 +21,19 @@ sidebar:
     getting_started: 快速开始
     overview: 概述
     architecture: 原理分析
-    dependency: 依赖
-    installation: 安装
+    dependency: 依赖检查
+    installation: 标准安装
+    installation_docker: Docker安装
     upgrade: 升级
     permission: 权限模型
     install_error: 安装错误
     configuration: 配置项目
     git_configuration: Git项目配置
     task_configuration: 高级任务配置
-    user_configuration: 项目用户配置
+    configuration_user: 用户配置
+    configuration_project: 项目配置
+    configuration_project_java: Java项目配置模板
+    configuration_project_php: PHP项目配置模板
     configuration_error: 检测错误
     getting_deploy: 上线使用
     submit_bill: 提交上线单
@@ -38,6 +42,6 @@ sidebar:
     customization: 自定义
     local: 各种自定义
     miscellaneous: 其它
-    troubleshooting: 问题解答
-    contributing: 贡献
+    troubleshooting: 常见问题排解
+    contributing: 我想贡献
     releases: 更新日志

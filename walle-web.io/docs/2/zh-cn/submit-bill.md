@@ -1,4 +1,7 @@
 title: 提交上线单
 ---
 
-请耐心，好事不怕晚
+
+![permission](/docs/2/zh-cn/static/task_select_project.png)
+
+![permission](/docs/2/zh-cn/static/task_select_commit.png)

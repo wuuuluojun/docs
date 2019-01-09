@@ -16,7 +16,7 @@ Requirements
 ------------
 ```
 mkdir -p /data/www/walle-web && cd /data/www/walle-web  # A place to store
-git clone git@github.com:meolu/walle-web-v1.x.git .          # clone is easy for update
+git clone https://github.com/meolu/walle-web-v1.x.git .          # clone is easy for update
 ```
 
 
@@ -97,6 +97,5 @@ server {
 --------
 visit：localhost
 
-of course, it would be nginx's server_name, such as walle.huamanshu.com, just visit walle.huamanshu.com.
-
-
+of course, it would be nginx's server_name, such as walle.huamanshu.com, just visit walle.huamanshu.com.  
+ You can use default account login walle, one is admin/admin, the other one is demo/demo.

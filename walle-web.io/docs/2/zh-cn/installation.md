@@ -5,8 +5,8 @@ title: 安装
 务必部署在内网！  
 务必部署在内网！  
 
-## 1.给此项目标个星star
-克隆项目前，请到github给此项目标个星star，不吝支持我们。
+## 1.请给此项目标个星star
+克隆项目前，请到[github - walle](https://github.com/meolu/walle-web)给此项目标个星star，不吝支持我们。
 
 反过来正是你的微不足道的支持，让我们坚持免费开源做下去，反馈于你，感谢你的信任。
 
@@ -19,7 +19,7 @@ git clone https://github.com/meolu/walle-web.git
 别忘了要重启nginx，注意标出可能需要改的地方
 ```
 upstream webservers {
-    server admin.walle-web.io:5000 weight=1; #域名设置
+    server 0.0.0.0:5000 weight=1; #域名设置
 }
 
 server {
@@ -31,7 +31,7 @@ server {
     location / {
         try_files $uri $uri/ /index.html;
         add_header access-control-allow-origin *;
-        root /walle-web/fe; # 前端代码
+        root /walle-web/fe; # 前端代码已集成到walle-web，即walle-web/fe的绝对路径
     }
 
     location ^~ /api/ {
@@ -65,51 +65,62 @@ server {
 ```
 vi /etc/hosts
 
-# add one line
+# 新增一行
 127.0.0.1  admin.walle-web.io # 与nginx配置一致
 ```
 
-## 5.Config environment
-安装**Python 2.7** + `pip`。``{PROJECT}`` 默认指项目。
+## 5.Install
+安装**Python 2.7** + `pip`。
 ```
-pip install virtualenv
+chmod +x admin.sh
+./admin.sh init
 
-cd {PROJECT}
-virtualenv venv
-source venv/bin/activate
-pip install -r requirements/prod.txt
+# 注意：安装mysqlclient失败，需要先安装libmysqlclient-dev(ubuntu)
+# 注意:安装失败请指定python路径. mac 可能会有用anaconda的python，找到自己系统的python 2.7追加参数指定 -p /usr/bin/python2.7 即可
+vi admin.sh +20
+virtualenv --no-site-packages -p /usr/local/bin/python2.7 venv
 ```
 
-## 6.Config code
-You will know to change what to suit for you environment
+## 6.Config setting
+带 **@TODO** 就是可能要修改的地方
 ```
 vi walle/config/settings_prod.py
 ```
 
 ## 7.Data Migration
-7.1创建一个数据库 walle
+7.0 ** MySQL 5.6.5以上**，否则会在安装时报错。在MySQL 5.6.5版本之前，Automatic Initialization and Updating只适用于TIMESTAMP，而且一张表中，最多允许一个TIMESTAMP字段采用该特性。从MySQL 5.6.5开始，Automatic Initialization and Updating同时适用于TIMESTAMP和DATETIME，且不限制数量。
+
+7.1 创建一个数据库 walle
 ```
 mysql  -hxx -uxx -p -e'CREATE SCHEMA walle'
 ```
-7.2Data Migration
+7.2 Data Migration
 ```
-export FLASK_APP=waller.py
-flask db upgrade
+./admin.sh migration
 ```
 
 ## 8.Start
+8.1 启动
 ```
-sh admin.sh start  # start with debug mode
+./admin.sh start
+```
+8.2 重启、升级、Migration
+```
+./admin.sh restart # 重启
+./admin.sh upgrade # 升级walle，升级完需要重启walle服务。升级前最好 git stash 暂存本地修改，升级后git stash pop弹出暂存，然后重启服务。
+./admin.sh migration # Migration
 ```
 
 
 ## 9.开启walle 2.0之旅
-浏览器打开`http://admin.walle-web.io`（因nginx配置域名而定）
-
-
-## 10.账号
+恭喜你，大功告成！浏览器打开`http://admin.walle-web.io`（因nginx配置域名而定）。登录账号如下，开启你的walle 2.0之旅吧：）
+```
 超管：super@walle-web.io Walle123
 所有者：owner@walle-web.io Walle123
 负责人：master@walle-web.io Walle123
 开发者：developer@walle-web.io Walle123
 访客：reporter@walle-web.io Walle123
+```
+
+## 其它
+walle运行过程，以及部署过程出错了，具体日志可以查看`logs/runtime.log`，别说你在启动walle的时候没注意到？
