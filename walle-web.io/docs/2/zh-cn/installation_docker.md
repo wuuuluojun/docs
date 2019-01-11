@@ -75,12 +75,17 @@ services:
     restart: always
 
   python:
+    # 默认使用alenx/walle-python:2.0
+    # maven工程使用alenx/walle-java:2.0; maven:3.6.0, jdk:1.8.0_181
     image: alenx/walle-python:2.0
+#    image: alenx/walle-java:2.0
     container_name: walle-python
     hostname: walle-python
     volumes:
       - /tmp/walle/codebase/:/tmp/walle/codebase/
-    command: bash -c "/bin/bash /opt/walle-web/admin.sh migration && python /opt/walle-web/waller.py"
+      - /tmp/walle/logs/:/opt/walle-web/logs/
+      - /root/.ssh:/root/.ssh/
+    command: bash -c "cd /opt/walle-web/ && /bin/bash admin.sh migration && python waller.py"
     expose:
       - "5000"
     links: 
