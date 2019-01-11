@@ -121,3 +121,6 @@ mysql  -hxx -uxx -p -e'CREATE SCHEMA walle'
 开发者：developer@walle-web.io Walle123
 访客：reporter@walle-web.io Walle123
 ```
+
+## 其它
+walle运行过程，以及部署过程出错了，具体日志可以查看`logs/runtime.log`，别说你在启动walle的时候没注意到？

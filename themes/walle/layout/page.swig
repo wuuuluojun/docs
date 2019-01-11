@@ -11,13 +11,14 @@
               </header>
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
                 {{ page_anchor(page.content) }}
-
               </div>
               <footer class="article-footer">
+                 {% if config.donate %}
+                 <div class="donate"><i class="fa fa-usd"></i><a href="{{location.host+'/donate.html'}}">打赏</a> <span>或者</span> <a style="font-size: 18px;" href="https://github.com/meolu/walle-web" target="_blank">star</a></div>
+                 {% endif %}
                 <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
                 {{ page_nav() }}
               </footer>
-              {{ partial('partial/comment') }}
             </div>
           </div>
           <aside id="article-toc" role="navigation">

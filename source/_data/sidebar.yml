@@ -12,7 +12,7 @@ docs1:
     git_configuration: git-configuration.html
     svn_configuration: svn-configuration.html
     task_configuration: task-configuration.html
-    user_configuration: user-configuration.html
+    configuration_user: configuration-user.html
     configuration_error: configuration-error.html
   getting_deploy:
     submit_bill: submit-bill.html
@@ -37,8 +37,10 @@ docs2:
     install_error: install-error.html
     troubleshooting: troubleshooting.html
   configuration:
-    user_configuration: user-configuration.html
-    configuration_java: configuration_java.html
+    configuration_user: configuration-user.html
+    configuration_project: configuration-project.html
+    configuration_project_java: configuration-project-java.html
+    configuration_project_php: configuration-project-php.html
     configuration_error: configuration-error.html
   getting_deploy:
     submit_bill: submit-bill.html

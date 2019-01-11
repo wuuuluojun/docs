@@ -2,6 +2,8 @@ title: 问题解答
 ---
 致所有`walle`用户，为更方便大家使用，精心细致准备了各种常见问题的解决方法，希望能帮助大家快速`trouble shooting`。也请大家为[walle](https://github.com/meolu/walle-web)点个star，为我们的付出点赞，谢谢。
 
+walle运行过程，以及部署过程出错了，具体日志可以查看`logs/runtime.log`，别说你在启动walle的时候没注意到？
+
 Authentication failed.
 ------------------
 ```
