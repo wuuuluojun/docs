@@ -72,13 +72,12 @@ vi /etc/hosts
 ## 5.Install
 安装**Python 2.7** + `pip`。
 ```
-chmod +x admin.sh
-./admin.sh init
+sh admin.sh init
 
 # 注意：安装mysqlclient失败，需要先安装libmysqlclient-dev(ubuntu)
-# 注意:安装失败请指定python路径. mac 可能会有用anaconda的python，找到自己系统的python 2.7追加参数指定 -p /usr/bin/python2.7 即可
-vi admin.sh +20
-virtualenv --no-site-packages -p /usr/local/bin/python2.7 venv
+# 注意：安装失败请指定python路径. mac 可能会有用anaconda的python，找到自己系统的python 2.7追加参数指定 -p /usr/bin/python2.7 即可
+# vi admin.sh +20
+# virtualenv --no-site-packages -p /usr/local/bin/python2.7 venv
 ```
 
 ## 6.Config setting
@@ -96,19 +95,19 @@ mysql  -hxx -uxx -p -e'CREATE SCHEMA walle'
 ```
 7.2 Data Migration
 ```
-./admin.sh migration
+sh admin.sh migration
 ```
 
 ## 8.Start
 8.1 启动
 ```
-./admin.sh start
+sh admin.sh start
 ```
 8.2 重启、升级、Migration
 ```
-./admin.sh restart # 重启
-./admin.sh upgrade # 升级walle，升级完需要重启walle服务。升级前最好 git stash 暂存本地修改，升级后git stash pop弹出暂存，然后重启服务。
-./admin.sh migration # Migration
+sh admin.sh restart # 重启
+sh admin.sh upgrade # 升级walle，升级完需要重启walle服务。升级前最好 git stash 暂存本地修改，升级后git stash pop弹出暂存，然后重启服务。
+sh admin.sh migration # Migration
 ```
 
 
@@ -124,3 +123,5 @@ mysql  -hxx -uxx -p -e'CREATE SCHEMA walle'
 
 ## 其它
 walle运行过程，以及部署过程出错了，具体日志可以查看`logs/runtime.log`，别说你在启动walle的时候没注意到？
+
+如果出现任何打开页面出现404或者只显示'wall-web 2.0'等，都是nginx配置或者服务没有启动，细心检查。
