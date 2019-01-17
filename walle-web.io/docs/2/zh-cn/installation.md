@@ -82,9 +82,24 @@ virtualenv --no-site-packages -p /usr/local/bin/python2.7 venv
 ```
 
 ## 6.Config setting
-带 **@TODO** 就是可能要修改的地方
+添加环境变量
+方法一(**建议**)：
+    在启动用户的家目录添加.env文件： vi ~/.env
+```shell
+# Set MySQL/Rails environment
+MYSQL_USER=walle
+MYSQL_PASSWORD=Walle123
+MYSQL_DATABASE=walle
+MYSQL_HOST=127.0.0.1
+MYSQL_PORT=3306
 ```
-vi walle/config/settings_prod.py
+方法二：
+```shell
+export MYSQL_USER=walle
+export MYSQL_PASSWORD=Walle123
+export MYSQL_DATABASE=walle
+export MYSQL_HOST=127.0.0.1
+export MYSQL_PORT=3306
 ```
 
 ## 7.Data Migration
