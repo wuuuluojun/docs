@@ -138,6 +138,14 @@ networks:
 docker-compose up -d && docker-compose logs -f
 # 打开浏览器localhost:80
 ```
+初始登录账号如下，开启你的walle 2.0之旅吧：）
+```
+超管：super@walle-web.io \ Walle123
+所有者：owner@walle-web.io \ Walle123
+负责人：master@walle-web.io \ Walle123
+开发者：developer@walle-web.io \ Walle123
+访客：reporter@walle-web.io \ Walle123
+```
 
 
 - 常用操作
