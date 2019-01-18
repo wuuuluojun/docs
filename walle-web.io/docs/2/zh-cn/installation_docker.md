@@ -51,7 +51,16 @@ install [docker-compose](https://docs.docker.com/compose/overview/)
 pip install docker-compose -i https://mirrors.aliyun.com/pypi/simple/
 ```
 
-
+## NEW environment file
+在docker-compose.yml同级目录新建walle.env，连接数据库MYSQL_USER默认使用root,如需使用其他用户，需自建用户更改walle.env文件
+vi walle.env
+```shell
+# Set MySQL/Rails environment
+MYSQL_USER=root
+MYSQL_PASSWORD=walle
+MYSQL_DATABASE=walle
+MYSQL_ROOT_PASSWORD=walle
+```
 
 ## Prepare Before Deploy
 vim docker-compose.yml
@@ -78,17 +87,20 @@ services:
     # 默认使用alenx/walle-python:2.0
     # maven工程使用alenx/walle-java:2.0; maven:3.6.0, jdk:1.8.0_181
     image: alenx/walle-python:2.0
-#    image: alenx/walle-java:2.0
+    #    image: alenx/walle-java:2.0
     container_name: walle-python
     hostname: walle-python
+    env_file:
+      # walle.env需和docker-compose在同级目录
+      - walle.env
+    command: bash -c "cd /opt/walle-web/ && /bin/bash admin.sh migration && python waller.py"
+    expose:
+      - "5000"
     volumes:
       - /tmp/walle/codebase/:/tmp/walle/codebase/
       - /tmp/walle/logs/:/opt/walle-web/logs/
       - /root/.ssh:/root/.ssh/
-    command: bash -c "cd /opt/walle-web/ && /bin/bash admin.sh migration && python waller.py"
-    expose:
-      - "5000"
-    links:
+    links: 
       - db
     depends_on:
       - db
@@ -100,14 +112,13 @@ services:
     image: mysql
     container_name: walle-mysql
     hostname: walle-mysql
+    env_file:
+      - walle.env
+    command: --default-authentication-plugin=mysql_native_password
     ports:
       - "3306:3306"
     expose:
       - "3306"
-    command: --default-authentication-plugin=mysql_native_password
-    environment:
-      MYSQL_ROOT_PASSWORD: walle
-      MYSQL_DATABASE: walle
     volumes:
       - /data/walle/mysql:/var/lib/mysql
     networks:
