@@ -109,7 +109,7 @@ services:
     restart: always
 
   db:
-    image: mysql
+    image: alenx/walle-mysql:2.0
     container_name: walle-mysql
     hostname: walle-mysql
     env_file:
