@@ -68,7 +68,7 @@ vim docker-compose.yml
 version: '3.7'
 services:
   web:
-    image: alenx/walle-web:2.0
+    image: alenx/walle-web:2.1
     container_name: walle-nginx
     hostname: nginx-web
     ports:
@@ -84,9 +84,9 @@ services:
     restart: always
 
   python:
-    # 默认使用alenx/walle-python:2.0
+    # 默认使用alenx/walle-python:2.1
     # maven工程使用alenx/walle-java:2.0; maven:3.6.0, jdk:1.8.0_181
-    image: alenx/walle-python:2.0
+    image: alenx/walle-python:2.1
     #    image: alenx/walle-java:2.0
     container_name: walle-python
     hostname: walle-python
@@ -109,7 +109,7 @@ services:
     restart: always
 
   db:
-    image: alenx/walle-mysql:2.0
+    image: alenx/walle-mysql:2.1
     container_name: walle-mysql
     hostname: walle-mysql
     env_file:
