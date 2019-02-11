@@ -75,8 +75,6 @@ services:
     # 如果宿主机80端口被占用，可自行修改为其他port(>=1024)
     # 0.0.0.0:要绑定的宿主机端口:docker容器内端口80
       - "80:80"
-    links:
-      - python
     depends_on:
       - python
     networks:
@@ -85,9 +83,9 @@ services:
 
   python:
     # 默认使用alenx/walle-python:2.1
-    # maven工程使用alenx/walle-java:2.0; maven:3.6.0, jdk:1.8.0_181
+    # maven工程使用alenx/walle-java:2.1; maven:3.6.0, jdk:1.8.0_181
     image: alenx/walle-python:2.1
-    #    image: alenx/walle-java:2.0
+    #    image: alenx/walle-java:2.1
     container_name: walle-python
     hostname: walle-python
     env_file:
@@ -100,8 +98,6 @@ services:
       - /tmp/walle/codebase/:/tmp/walle/codebase/
       - /tmp/walle/logs/:/opt/walle-web/logs/
       - /root/.ssh:/root/.ssh/
-    links: 
-      - db
     depends_on:
       - db
     networks:
@@ -153,7 +149,7 @@ docker-compose up -d && docker-compose logs -f
 # 构建服务
 docker-compose build
 # 启动服务,启动过程中可以直接查看终端日志，观察启动是否成功
-docker-compsoe up
+docker-compose up
 # 启动服务在后台，如果确认部署成功，则可以使用此命令，将应用跑在后台，作用类似 nohup python waller.py &
 docker-compose up -d
 # 查看日志,效果类似 tail -f waller.log
