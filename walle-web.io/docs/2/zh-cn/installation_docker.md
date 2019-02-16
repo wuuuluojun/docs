@@ -51,68 +51,83 @@ install [docker-compose](https://docs.docker.com/compose/overview/)
 pip install docker-compose -i https://mirrors.aliyun.com/pypi/simple/
 ```
 
-
-
-## Prepare Before Deploy
-
-修改settings_prod.py
-```python
-# walle/config/settings_prod.py:17
-class ProdConfig(Config):
-    """Production configuration."""
-
-    # .....
-    # .....
-
-    # todo 数据库设置
-    SQLALCHEMY_DATABASE_URI = 'mysql://user:password@localhost/walle'
-
+## NEW environment file
+在docker-compose.yml同级目录新建walle.env，连接数据库MYSQL_USER默认使用root,如需使用其他用户，需自建用户更改walle.env文件
+vi walle.env
+```shell
+# Set MySQL/Rails environment
+MYSQL_USER=root
+MYSQL_PASSWORD=walle
+MYSQL_DATABASE=walle
+MYSQL_ROOT_PASSWORD=walle
 ```
 
-修改docker-compose.yml
+## Prepare Before Deploy
+vim docker-compose.yml
 ```yaml
-version: "3.6"
-
+version: '3.7'
 services:
-
-  mysql:
-    image: mysql:5.7
-    ports:
-      - 0.0.0.0:3306:3306
-    expose:
-      - 3306
-    environment:
-      # todo 数据库root密码，这个如果需要修改，需要和 walle/config/settings_prod.py 中数据库密码保持一致
-      MYSQL_ROOT_PASSWORD: walle
-      MYSQL_DATABASE: walle
-    volumes:
-      - ${HOME}/.walle/mysql:/var/lib/mysql
-    restart: always
-
   web:
-    build: ./
-    links:
-      - mysql
-    expose:
-      - 5000
-    environment:
-      - WALLE_SECRET="guess me out"
-    restart: always
-
-  gateway:
-    image: nginx
-    links:
-      - mysql
-      - web
+    image: alenx/walle-web:2.0
+    container_name: walle-nginx
+    hostname: nginx-web
     ports:
-      # 如果宿主机80端口被占用，可自行修改为其他port(>=1024)
-      # 0.0.0.0:要绑定的宿主机端口:docker容器内端口80
-      - 0.0.0.0:80:80
-    volumes:
-      - ./fe/:/data/web/:ro
-      - ./gateway/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    # 如果宿主机80端口被占用，可自行修改为其他port(>=1024)
+    # 0.0.0.0:要绑定的宿主机端口:docker容器内端口80
+      - "80:80"
+    links:
+      - python
+    depends_on:
+      - python
+    networks:
+      - walle-net
     restart: always
 
+  python:
+    # 默认使用alenx/walle-python:2.0
+    # maven工程使用alenx/walle-java:2.0; maven:3.6.0, jdk:1.8.0_181
+    image: alenx/walle-python:2.0
+    #    image: alenx/walle-java:2.0
+    container_name: walle-python
+    hostname: walle-python
+    env_file:
+      # walle.env需和docker-compose在同级目录
+      - walle.env
+    command: bash -c "cd /opt/walle-web/ && /bin/bash admin.sh migration && python waller.py"
+    expose:
+      - "5000"
+    volumes:
+      - /tmp/walle/codebase/:/tmp/walle/codebase/
+      - /tmp/walle/logs/:/opt/walle-web/logs/
+      - /root/.ssh:/root/.ssh/
+    links: 
+      - db
+    depends_on:
+      - db
+    networks:
+      - walle-net
+    restart: always
+
+  db:
+    image: mysql
+    container_name: walle-mysql
+    hostname: walle-mysql
+    env_file:
+      - walle.env
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - /data/walle/mysql:/var/lib/mysql
+    networks:
+      - walle-net
+    restart: always
+
+networks:
+  walle-net:
+    driver: bridge
 ```
 
 
@@ -120,8 +135,16 @@ services:
 
 - 一键启动（快速体验）
 ```bash
-docker-compose build && docker-compose up -d && docker-compose logs -f
+docker-compose up -d && docker-compose logs -f
 # 打开浏览器localhost:80
+```
+初始登录账号如下，开启你的walle 2.0之旅吧：）
+```
+超管：super@walle-web.io \ Walle123
+所有者：owner@walle-web.io \ Walle123
+负责人：master@walle-web.io \ Walle123
+开发者：developer@walle-web.io \ Walle123
+访客：reporter@walle-web.io \ Walle123
 ```
 
 

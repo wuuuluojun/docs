@@ -8,3 +8,4 @@ public/
 .travis/ssh_key
 .travis/ssh_key.pub
 source/docs/*
+.idea/
