@@ -26,6 +26,9 @@
     margin-bottom: 20px
     display: flex
     justify-content: flex-start
+    @media mq-mobile
+      flex-direction: column
+      margin: 0
 
 .user-desc 
     padding: 0;
@@ -64,6 +67,9 @@
     justify-content: center;
     align-items: center;
     width: calc(25% - 25px)
+    @media mq-mobile
+      margin: 0 20px 20px 20px
+      width: auto
 
     &:hover
         .user-desc 

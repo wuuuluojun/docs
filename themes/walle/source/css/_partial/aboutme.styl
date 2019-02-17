@@ -1,5 +1,7 @@
 #aboutme
   margin: 0 150px
+  @media mq-mobile
+    margin: auto
 
 .aboutme-title
     font-size: 22px
@@ -9,6 +11,8 @@
 .aboutme-img
     display: flex
     justify-content: flex-start
+    @media mq-mobile
+      flex-direction: column
 
     img
         width: 260px
