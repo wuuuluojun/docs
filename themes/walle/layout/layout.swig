@@ -2,7 +2,7 @@
 <html lang="{{ page.lang }}">
 {{ partial('partial/head') }}
 <body class="{% if is_home() %}home{% endif %}">
-  <div id="container">
+  <div id="container" class="{% if is_home() %}document{% endif %}">
     {{ partial('partial/header') }}
     {% if is_home() %}<header id="banner" class="wrapper">
       <div class="inner">
