@@ -3,14 +3,13 @@
 {{ partial('partial/head') }}
 <body class="{% if is_home() %}home{% endif %}">
   <div id="container">
-    {% if is_home() %}<div class="with-background" style="background-size: 100% 850px;">{% endif %}
     {{ partial('partial/header') }}
     {% if is_home() %}<header id="banner" class="wrapper">
       <div class="inner">
         <h2 id="banner-title">{{ site.data.index.subtitle }}</h2>
-        <div id="banner-start">
-        </div>
+        <div id="banner-logo"><img src="{{ url_for('images/user/logo-blark.png') }}"/></div>
         <div id="banner-share">{{ partial('partial/share') }}</div>
+        <div id="walle">walle-web.io</div>
       </div>
     </header>
     </div>
