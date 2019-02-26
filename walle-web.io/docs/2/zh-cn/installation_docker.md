@@ -73,7 +73,7 @@ vim docker-compose.yml
 version: "3.7"
 services:
   web:
-    image: alenx/walle-web:2.2
+    image: alenx/walle-web:2.1
     container_name: walle-nginx
     hostname: nginx-web
     ports:
@@ -87,7 +87,7 @@ services:
     restart: always
 
   python:
-    image: alenx/walle-python:2.2
+    image: alenx/walle-python:2.1
     container_name: walle-python
     hostname: walle-python
     env_file:
