@@ -19,7 +19,7 @@ git clone https://github.com/meolu/walle-web.git
 别忘了要重启nginx，注意标出可能需要改的地方
 ```
 upstream webservers {
-    server 0.0.0.0:5000 weight=1; #域名设置
+    server 0.0.0.0:5000 weight=1; # 负载设置
 }
 
 server {
