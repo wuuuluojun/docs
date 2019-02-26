@@ -2,11 +2,9 @@ body.home{
   background: #171f26;
 }
 
-.home .with-background {
-  background: #171f26  url(/bg.jpg) no-repeat center top
-  // background-size: cover
-  background-size: 100% 850px
-}
+.document 
+  background-image: -webkit-radial-gradient(farthest-corner, #5e484d,#2a2023)
+  background-image: radial-gradient(farthest-corner, #5e484d,#2a2023)
 
 .home
   background: #fff
@@ -14,6 +12,15 @@ body.home{
     color: #fff;
   .mobile-nav-toggle-bar
     background: #fff
+
+#walle
+  color: #f4e0c7
+  font-size: 40px
+  font-weight: 600
+  line-height: 120px
+  text-shadow: 5px 5px 5px #111
+  @media mq-normal
+    font-size: 80px
 
 
 #banner
@@ -39,6 +46,17 @@ body.home{
     padding: 40px 0
     font-size: 14px
 
+#banner-logo
+  width: 220px
+  height: 220px
+  background: #f4e0c7
+  margin: 35px auto
+  border-radius: 50%
+  
+  img
+    width: 100%;
+    margin: 30px auto;
+
 #banner-start-command
   color: #444
   background: lighten(color-walle, 10%)
@@ -63,10 +81,7 @@ body.home{
     background: color-link-hover
 
 #banner-share
-  display: none
-  padding-top: 190px;
-  @media mq-normal
-    display: block
+  display: block
 
 #intro-feature-list
   padding-top: 20px
@@ -78,7 +93,7 @@ body.home{
 
 .intro-feature-wrap
   padding-top: 20px
-  width: 360px
+  width: 340px
   @media mq-normal
     padding-top: 50px
 
