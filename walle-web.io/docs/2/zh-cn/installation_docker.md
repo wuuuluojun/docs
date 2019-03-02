@@ -60,23 +60,26 @@ MYSQL_USER=root
 MYSQL_PASSWORD=walle
 MYSQL_DATABASE=walle
 MYSQL_ROOT_PASSWORD=walle
+MYSQL_HOST=db
+MYSQL_PORT=3306
 ```
 
 ## Prepare Before Deploy
 vim docker-compose.yml
 ```yaml
-version: '3.7'
+# docker version:  18.06.0+
+# docker-compose version: 1.23.2+
+# OpenSSL version: OpenSSL 1.1.0h
+version: "3.7"
 services:
   web:
-    image: alenx/walle-web:2.0
+    image: alenx/walle-web:2.1
     container_name: walle-nginx
     hostname: nginx-web
     ports:
-    # 如果宿主机80端口被占用，可自行修改为其他port(>=1024)
-    # 0.0.0.0:要绑定的宿主机端口:docker容器内端口80
+      # 如果宿主机80端口被占用，可自行修改为其他port(>=1024)
+      # 0.0.0.0:要绑定的宿主机端口:docker容器内端口80
       - "80:80"
-    links:
-      - python
     depends_on:
       - python
     networks:
@@ -84,24 +87,20 @@ services:
     restart: always
 
   python:
-    # 默认使用alenx/walle-python:2.0
-    # maven工程使用alenx/walle-java:2.0; maven:3.6.0, jdk:1.8.0_181
-    image: alenx/walle-python:2.0
-    #    image: alenx/walle-java:2.0
+    image: alenx/walle-python:2.1
     container_name: walle-python
     hostname: walle-python
     env_file:
       # walle.env需和docker-compose在同级目录
-      - walle.env
-    command: bash -c "cd /opt/walle-web/ && /bin/bash admin.sh migration && python waller.py"
+      - ./walle.env
+    command: bash -c "cd /opt/walle-web/ && /bin/bash admin.sh migration &&  python waller.py"
     expose:
       - "5000"
     volumes:
-      - /tmp/walle/codebase/:/tmp/walle/codebase/
-      - /tmp/walle/logs/:/opt/walle-web/logs/
+      - /opt/walle_home/plugins/:/opt/walle_home/plugins/
+      - /opt/walle_home/codebase/:/opt/walle_home/codebase/
+      - /opt/walle_home/logs/:/opt/walle_home/logs/
       - /root/.ssh:/root/.ssh/
-    links: 
-      - db
     depends_on:
       - db
     networks:
@@ -113,8 +112,8 @@ services:
     container_name: walle-mysql
     hostname: walle-mysql
     env_file:
-      - walle.env
-    command: --default-authentication-plugin=mysql_native_password
+      - ./walle.env
+    command: [ '--default-authentication-plugin=mysql_native_password', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
     ports:
       - "3306:3306"
     expose:
@@ -153,13 +152,17 @@ docker-compose up -d && docker-compose logs -f
 # 构建服务
 docker-compose build
 # 启动服务,启动过程中可以直接查看终端日志，观察启动是否成功
-docker-compsoe up
+docker-compose up
 # 启动服务在后台，如果确认部署成功，则可以使用此命令，将应用跑在后台，作用类似 nohup python waller.py &
 docker-compose up -d
 # 查看日志,效果类似 tail -f waller.log
 docker-compose logs -f
 # 停止服务,会停止服务的运行，但是不会删除服务所所依附的网络，以及存储等
-docker-compsoe stop
+docker-compose stop
 # 删除服务，并删除服务产生的网络，存储等，并且会关闭服务的守护
 docker-compose down
 ```
+
+## Error
+如果遇见一下错误，请docker-compose down之后再docker-compose up一次就可以了，这是mysql没有初始化完，就启动了python-server
+![permission](/docs/2/zh-cn/static/docker-error.png)
