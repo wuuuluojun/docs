@@ -25,8 +25,8 @@ upstream webservers {
 server {
     listen       80;
     server_name  admin.walle-web.io; # 域名设置
-    access_log   /usr/local/nginx/logs/walle.log main;
-    index index.html index.htm; # 日志目录
+    access_log   /usr/local/nginx/logs/walle.log main; # 日志目录
+    index index.html index.htm; # 默认文档
 
     location / {
         try_files $uri $uri/ /index.html;
